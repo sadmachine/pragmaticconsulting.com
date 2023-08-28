@@ -10,9 +10,9 @@
 
 
   <link type="text/css" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="stylesheet" href="{{ asset('css/com/com.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/com/fonts.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/font-awesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ resource('css/com/com.css') }}">
+  <link rel="stylesheet" href="{{ resource('css/com/fonts.css') }}">
+  <link rel="stylesheet" href="{{ resource('css/font-awesome/css/all.min.css') }}">
 
   {{-- <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="css/fontawesome.css">
@@ -20,14 +20,42 @@
   <link rel="stylesheet" href="css/solid.css"> --}}
 
   <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src="https://www.googletagmanager.com/gtag/js?id=UA-29687620-5" async></script>
+
+  <!-- GA4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYLZEEZMDN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-YYLZEEZMDN');
+  </script>
+  <!-- / GA4 (gtag.js) -->
+
+  <!-- GA3 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29687620-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-29687620-5');
+  </script>
+  <!-- / GA3 (gtag.js) -->
+
 
   @yield('head')
 
-  <title>@section('page-title')@yield('content-title')@show | Pragmatic Consulting</title>
-</head>
+  <title>
+    @section('page-title')@yield('content-title')@show | Pragmatic Consulting
+    </title>
+  </head>
 
-<body>
+  <body>
   @section('body')
     <div class="container-fluid">
       <div class="row d-block d-lg-none">

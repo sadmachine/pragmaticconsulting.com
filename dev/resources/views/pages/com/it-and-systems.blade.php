@@ -1,4 +1,4 @@
-@extends('layout.com')
+@extends('layouts.com')
 
 @section('content-id', 'it-and-systems')
 @section('content-title', 'IT & Systems Consulting')
@@ -66,19 +66,19 @@
                 <div class="col">
                   <a class="system-icon" href="jdedwards.php" data-toggle="tooltip" data-placement="bottom"
                     title="JD Edwards System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/jdedwards.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/jdedwards.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="sap.php" data-toggle="tooltip" data-placement="bottom"
                     title="SAP System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/sap.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/sap.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="syspro.php" data-toggle="tooltip" data-placement="bottom"
                     title="SysPro System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/syspro.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/syspro.png') }}" />
                   </a>
                 </div>
               </div>
@@ -95,19 +95,19 @@
                 <div class="col">
                   <a class="system-icon" href="epicor.php" data-toggle="tooltip" data-placement="bottom"
                     title="Epicor System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/epicor.jpg') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/epicor.jpg') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="dynamics.php" data-toggle="tooltip" data-placement="bottom"
                     title="Dynamics System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/dynamics.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/dynamics.png') }}" />
                   </a>
                 </div>
                 <div class="col text-center">
                   <a class="system-icon" href="infor.php" data-toggle="tooltip" data-placement="bottom"
                     title="Infor System Info">
-                    <img class="img-fluid" style="max-height: 100px;" src="{{ asset('img/logos/syteline.png') }}" />
+                    <img class="img-fluid" style="max-height: 100px;" src="{{ resource('img/logos/syteline.png') }}" />
                   </a>
                 </div>
               </div>
@@ -115,19 +115,19 @@
                 <div class="col">
                   <a class="system-icon" href="globalshop.php" data-toggle="tooltip" data-placement="bottom"
                     title="GlobalShop System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/globalshop.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/globalshop.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="iqms.php" data-toggle="tooltip" data-placement="bottom"
                     title="IQMS System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/iqms.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/iqms.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="traverse.php" data-toggle="tooltip" data-placement="bottom"
                     title="Traverse System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/traverse.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/traverse.png') }}" />
                   </a>
                 </div>
               </div>
@@ -144,19 +144,19 @@
                 <div class="col text-center">
                   <a class="system-icon" href="e2.php" data-toggle="tooltip" data-placement="bottom"
                     title="E2 Mfg Info">
-                    <img class="img-fluid" style="max-height: 75px;" src="{{ asset('img/logos/e2.png') }}" />
+                    <img class="img-fluid" style="max-height: 75px;" src="{{ resource('img/logos/e2.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="https://www.pragmaticdba.com/" data-toggle="tooltip"
                     data-placement="bottom" title="DBA Manufacturing Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/dba-mfg-new-removebg.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/dba-mfg-new-removebg.png') }}" />
                   </a>
                 </div>
                 <div class="col">
                   <a class="system-icon" href="fishbowl.php" data-toggle="tooltip" data-placement="bottom"
                     title="Fishbowl System Info">
-                    <img class="img-fluid" src="{{ asset('img/logos/fishbowl.png') }}" />
+                    <img class="img-fluid" src="{{ resource('img/logos/fishbowl.png') }}" />
                   </a>
                 </div>
               </div>
@@ -167,7 +167,7 @@
               <div class="row align-items-center align-items-lg-start align-items-xl-center">
                 <div class="col">
                   <img class="img-fluid" style="max-height: 80px"
-                    src="{{ asset('img/logos/intuit-quickbooks-proadvisor-removebg.png') }}"
+                    src="{{ resource('img/logos/intuit-quickbooks-proadvisor-removebg.png') }}"
                     alt="Intuit Quickbooks ProAdvisor" />
                 </div>
                 <h4 class="col pt-1 pt-lg-2 pt-xl-1 text-center">
@@ -232,7 +232,7 @@
               </h3>
             </div>
             <div class="col-12 col-lg-auto text-center pb-3">
-              <img class="img-fluid" id="datto-logo" src="{{ asset('img/logos/datto.png') }}" />
+              <img class="img-fluid" id="datto-logo" src="{{ resource('img/logos/datto.png') }}" />
             </div>
           </div>
         </section>

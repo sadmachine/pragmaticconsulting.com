@@ -1,4 +1,4 @@
-@extends('layout.com')
+@extends('layouts.com')
 
 @section('content-id', 'epicor')
 @section('content-title', 'Epicor ERP Software')
