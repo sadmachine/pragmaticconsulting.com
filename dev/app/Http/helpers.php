@@ -12,3 +12,19 @@ if (!function_exists('file_ext')) {
         return strtolower(pathinfo($filename, PATHINFO_EXTENSION));
     }
 }
+
+if (!function_exists('resource')) {
+    function resource($location)
+    {
+        $path = trim(env('ASSET_PREFIX', ''), '/') . '/' . trim($location, '/');
+        return asset($path);
+    }
+}
+
+if (!function_exists('dynamic_url')) {
+    function dynamic_url($location)
+    {
+        $path = trim(env('URL_PREFIX', ''), '/') . '/' . trim($location, '/');
+        return url($path);
+    }
+}
