@@ -13,18 +13,26 @@ if (!function_exists('file_ext')) {
     }
 }
 
-if (!function_exists('resource')) {
-    function resource($location)
-    {
-        $path = trim(env('ASSET_PREFIX', ''), '/') . '/' . trim($location, '/');
-        return asset($path);
+if (!function_exists('path')) {
+    function path_concat() {
+        $paths = array();
+
+        foreach (func_get_args() as $arg) {
+            if ($arg !== '') { $paths[] = $arg; }
+        }
+
+        return preg_replace('#/+#','/',join('/', $paths));
     }
 }
 
-if (!function_exists('dynamic_url')) {
-    function dynamic_url($location)
+if (!function_exists('resource')) {
+    function resource($location)
     {
-        $path = trim(env('URL_PREFIX', ''), '/') . '/' . trim($location, '/');
-        return url($path);
+        $path = path_concat(
+            env('APP_PREFIX', ''), 
+            env('APP_ASSETS_PREFIX', ''), 
+            $location
+        );
+        return asset($path);
     }
 }
