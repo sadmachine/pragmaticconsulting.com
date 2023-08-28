@@ -12,102 +12,192 @@ use App\Struct\Link;
   # Simple 'view' Routes
 \*------------------------------------*/
 
-Route::any('/home', 'Com\GetController@home');
-// About
-Route::any('/overview', 'Com\GetController@overview');
-Route::any('/location', 'Com\GetController@location');
+Route::prefix(env('APP_PREFIX', ''))->group(function() {
+    Route::any(env('HOME_ROUTE', '/home') . '{ext}', 'Com\GetController@home')
+        ->where('ext', '(.php)?')
+        ->name('home');
+    // About
+    Route::any('/overview{ext}', 'Com\GetController@overview')
+        ->where('ext', '(.php)?')
+        ->name('overview');
+    Route::any('/location{ext}', 'Com\GetController@location')
+        ->where('ext', '(.php)?')
+        ->name('location');
 
-// Leadership
-Route::any('/officers', 'Com\GetController@officers');
-Route::any('/board-of-advisors', 'Com\GetController@boardOfAdvisors');
-Route::any('/meet-our-team', 'Com\GetController@meetOurTeam');
+    // Leadership
+    Route::any('/officers{ext}', 'Com\GetController@officers')
+        ->where('ext', '(.php)?')
+        ->name('officers');
+    Route::any('/board-of-advisors{ext}', 'Com\GetController@boardOfAdvisors')
+        ->where('ext', '(.php)?')
+        ->name('board-of-advisors');
+    Route::any('/meet-our-team{ext}', 'Com\GetController@meetOurTeam')
+        ->where('ext', '(.php)?')
+        ->name('meet-our-team');
 
-// Services
-Route::any('/engineering-consulting', 'Com\GetController@engineeringConsulting');
-Route::any('/human-capital', 'Com\GetController@humanCapital');
-Route::any('/interim-executive', 'Com\GetController@interimExecutive');
-Route::any('/ceo-coo', 'Com\GetController@ceoCoo');
-Route::any('/chro', 'Com\GetController@chro');
-Route::any('/cfo', 'Com\GetController@cfo');
-Route::any('/cio-cto', 'Com\GetController@cioCto');
-Route::any('/it-and-systems', 'Com\GetController@itAndSystems');
-Route::any('/lean-six-sigma', 'Com\GetController@leanSixSigma');
-Route::any('/project-management', 'Com\GetController@projectManagement');
-Route::any('/quality-systems', 'Com\GetController@qualitySystems');
-Route::any('/sales-and-marketing', 'Com\GetController@salesAndMarketing');
-Route::any('/security', 'Com\GetController@security');
-Route::any('/supply-chain', 'Com\GetController@supplyChain');
-Route::any('/import-export', 'Com\GetController@importExport');
-Route::any('/compliance', 'Com\GetController@compliance');
-Route::any('/global-supply-chain', 'Com\GetController@globalSupplyChain');
+    // Services
+    Route::any('/engineering-consulting{ext}', 'Com\GetController@engineeringConsulting')
+		->where('ext', '(.php)?')
+        ->name('engineering-consulting');
+    Route::any('/human-capital{ext}', 'Com\GetController@humanCapital')
+		->where('ext', '(.php)?')
+        ->name('human-capital');
+    Route::any('/interim-executive{ext}', 'Com\GetController@interimExecutive')
+		->where('ext', '(.php)?')
+        ->name('interim-executive');
+    Route::any('/ceo-coo{ext}', 'Com\GetController@ceoCoo')
+		->where('ext', '(.php)?')
+        ->name('ceo-coo');
+    Route::any('/chro{ext}', 'Com\GetController@chro')
+		->where('ext', '(.php)?')
+        ->name('chro');
+    Route::any('/cfo{ext}', 'Com\GetController@cfo')
+		->where('ext', '(.php)?')
+        ->name('cfo');
+    Route::any('/cio-cto{ext}', 'Com\GetController@cioCto')
+		->where('ext', '(.php)?')
+        ->name('cio-cto');
+    Route::any('/it-and-systems{ext}', 'Com\GetController@itAndSystems')
+		->where('ext', '(.php)?')
+        ->name('it-and-systems');
+    Route::any('/lean-six-sigma{ext}', 'Com\GetController@leanSixSigma')
+		->where('ext', '(.php)?')
+        ->name('lean-six-sigma');
+    Route::any('/project-management{ext}', 'Com\GetController@projectManagement')
+		->where('ext', '(.php)?')
+        ->name('project-management');
+    Route::any('/quality-systems{ext}', 'Com\GetController@qualitySystems')
+		->where('ext', '(.php)?')
+        ->name('quality-systems');
+    Route::any('/sales-and-marketing{ext}', 'Com\GetController@salesAndMarketing')
+		->where('ext', '(.php)?')
+        ->name('sales-and-marketing');
+    Route::any('/security{ext}', 'Com\GetController@security')
+		->where('ext', '(.php)?')
+        ->name('security');
+    Route::any('/supply-chain{ext}', 'Com\GetController@supplyChain')
+		->where('ext', '(.php)?')
+        ->name('supply-chain');
+    Route::any('/import-export{ext}', 'Com\GetController@importExport')
+		->where('ext', '(.php)?')
+        ->name('import-export');
+    Route::any('/compliance{ext}', 'Com\GetController@compliance')
+		->where('ext', '(.php)?')
+        ->name('compliance');
+    Route::any('/global-supply-chain{ext}', 'Com\GetController@globalSupplyChain')
+		->where('ext', '(.php)?')
+        ->name('global-supply-chain');
 
-// Portfolio
-Route::any('/industries', 'Com\GetController@industries');
-Route::any('/our-clients', 'Com\GetController@ourClients');
+    // Portfolio
+    Route::any('/industries{ext}', 'Com\GetController@industries')
+		->where('ext', '(.php)?')
+        ->name('industries');
+    Route::any('/our-clients{ext}', 'Com\GetController@ourClients')
+		->where('ext', '(.php)?')
+        ->name('our-clients');
 
-// Pages accessible from 'IT & Systems'
-Route::any('/jdedwards', 'Com\GetController@jdedwards');
-Route::any('/sap', 'Com\GetController@sap');
-Route::any('/syspro', 'Com\GetController@syspro');
-Route::any('/epicor', 'Com\GetController@epicor');
-Route::any('/dynamics', 'Com\GetController@dynamics');
-Route::any('/infor', 'Com\GetController@infor');
-Route::any('/globalshop', 'Com\GetController@globalshop');
-Route::any('/iqms', 'Com\GetController@iqms');
-Route::any('/traverse', 'Com\GetController@traverse');
-Route::any('/e2', 'Com\GetController@e2');
-Route::any('/fishbowl', 'Com\GetController@fishbowl');
+    // Pages accessible from 'IT & Systems'
+    Route::any('/jdedwards{ext}', 'Com\GetController@jdedwards')
+		->where('ext', '(.php)?')
+        ->name('jdedwards');
+    Route::any('/sap{ext}', 'Com\GetController@sap')
+		->where('ext', '(.php)?')
+        ->name('sap');
+    Route::any('/syspro{ext}', 'Com\GetController@syspro')
+		->where('ext', '(.php)?')
+        ->name('syspro');
+    Route::any('/epicor{ext}', 'Com\GetController@epicor')
+		->where('ext', '(.php)?')
+        ->name('epicor');
+    Route::any('/dynamics{ext}', 'Com\GetController@dynamics')
+		->where('ext', '(.php)?')
+        ->name('dynamics');
+    Route::any('/infor{ext}', 'Com\GetController@infor')
+		->where('ext', '(.php)?')
+        ->name('infor');
+    Route::any('/globalshop{ext}', 'Com\GetController@globalshop')
+		->where('ext', '(.php)?')
+        ->name('globalshop');
+    Route::any('/iqms{ext}', 'Com\GetController@iqms')
+		->where('ext', '(.php)?')
+        ->name('iqms');
+    Route::any('/traverse{ext}', 'Com\GetController@traverse')
+		->where('ext', '(.php)?')
+        ->name('traverse');
+    Route::any('/e2', 'Com\GetController@e2')
+		->where('ext', '(.php)?')
+        ->name('e2');
+    Route::any('/fishbowl{ext}', 'Com\GetController@fishbowl')
+		->where('ext', '(.php)?')
+        ->name('fishbowl');
 
-// Other pages
-Route::any('/supply-chain-examples', 'Com\GetController@supplyChainExamples');
-Route::any('/{iso}9000', 'Com\GetController@iso9000')->where('iso', "(iso|ISO)");
-Route::any('/problem-solving', 'Com\GetController@problemSolving');
-Route::any('/privacy-policy', 'Com\GetController@privacyPolicy');
-
-
-/*------------------------------------*\
-  # Static Controller Routes
-\*------------------------------------*/
-
-Route::get('/contact', 'Com\ContactController@display');
-Route::post('/contact', 'Com\ContactController@submit');
-Route::get('/news-and-events', 'Com\GetController@newsAndEvents');
-
-
-/*------------------------------------*\
-  # Dynamic Controller Routes
-\*------------------------------------*/
-
-Route::get('/articles/{article_slug}', 'Com\GetController@articles')->where('article_slug', '[A-Za-z0-9-]+');
-
-
-
-
-
-/*------------------------------------*\
-  # Helpful Redirects
-\*------------------------------------*/
-
-/**
- * Handle any legacy links which contain the ".php" suffix
- * 
- * This is done by rerouting "/page.php" to "/page"
- */
-Route::get('/{pagename}.php', function ($pagename) {
-  return redirect('/' . $pagename);
-})->where('pagename', '[A-Za-z0-9-]+');
+    // Other pages
+    Route::any('/supply-chain-examples{ext}', 'Com\GetController@supplyChainExamples')
+		->where('ext', '(.php)?')
+        ->name('supply-chain-examples');
+    Route::any('/{iso}9000{ext}', 'Com\GetController@iso9000')
+		->where('iso', "(iso|ISO)")
+		->where('ext', '(.php)?')
+        ->name('iso9000');
+    Route::any('/problem-solving{ext}', 'Com\GetController@problemSolving')
+		->where('ext', '(.php)?')
+        ->name('problem-solving');
+    Route::any('/privacy-policy{ext}', 'Com\GetController@privacyPolicy')
+		->where('ext', '(.php)?')
+        ->name('privacy-policy');
 
 
-/**
- * Force an empty url ending to redirect to '/home'
- */
-Route::get('/', function () {
-  return redirect('/home');
+    /*------------------------------------*\
+    # Static Controller Routes
+    \*------------------------------------*/
+
+    Route::get('contact{ext}', 'Com\ContactController@display')
+        ->where('ext', '(.php)?')
+        ->name('contact-get');
+    Route::post('contact{ext}', 'Com\ContactController@submit')
+        ->where('ext', '(.php)?')
+        ->name('contact-post');
+    Route::get('news-and-events{ext}', 'Com\GetController@newsAndEvents')
+        ->where('ext', '(.php)?')
+        ->name('news-and-events');
+
+
+    /*------------------------------------*\
+    # Dynamic Controller Routes
+    \*------------------------------------*/
+
+    Route::get('articles/{article_slug}', 'Com\GetController@articles')
+		->where('article_slug', '[A-Za-z0-9-]+');
+
+
+
+
+    /*------------------------------------*\
+    # Helpful Redirects
+    \*------------------------------------*/
+
+    /**
+     * Handle any legacy links which contain the ".php" suffix
+     * 
+     * This is done by rerouting "/page.php" to "/page"
+     */
+    Route::get('{pagename}.php', function ($pagename) {
+        return redirect('/' . $pagename);
+    })->where('pagename', '[A-Za-z0-9-]+');
+
+
+    /**
+     * Force an empty url ending to redirect to '/home'
+     */
+    Route::get('', function () {
+        return redirect(route('home'));
+    });
+
+    /*------------------------------------*\
+    # Auth Routes
+    \*------------------------------------*/
+    Auth::routes();
+
+    Route::get('admin', 'DashboardController@index')
+        ->name('admin');
 });
-
-/*------------------------------------*\
-  # Auth Routes
-\*------------------------------------*/
-Auth::routes();
-
-Route::get('/admin', 'DashboardController@index');
