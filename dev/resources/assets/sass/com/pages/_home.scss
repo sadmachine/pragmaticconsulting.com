@@ -1,0 +1,45 @@
+@use '../vendor/bootstrap';
+/* Styles specific to the index.php page */
+
+#lead-info {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #title-images {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #title-images img {
+        max-width: 40vw;
+        height: 10rem;
+        object-fit: scale-down;
+    }
+
+    @media (min-width: 576px) {
+        #title-images img {
+            max-width: 30vw;
+            height: 12.5rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #title-images img {
+            max-width: 20vw;
+        }
+    }
+}
+
+#logos img {
+    object-fit: scale-down;
+    max-height: 75px;
+
+    @include bootstrap.media-breakpoint-up(lg) {
+        max-height: 65px;
+    }
+
+    @include bootstrap.media-breakpoint-up(xl) {
+        max-height: 100px;
+    }
+}

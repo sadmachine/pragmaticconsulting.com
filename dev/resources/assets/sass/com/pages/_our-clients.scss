@@ -1,0 +1,42 @@
+@use '../vendor/bootstrap';
+
+.card-client {
+    height: 220px;
+    div.client-img {
+        height: 140px;
+        padding-bottom: 10px;
+    }
+    div.client-name {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+
+        p {
+            font-size: 1.5rem;
+
+            @include bootstrap.media-breakpoint-up(sm) {
+                font-size: 1.2rem;
+            }
+
+            @include bootstrap.media-breakpoint-up(md) {
+                font-size: 1rem;
+            }
+            line-height: 1.25;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.col-card-client {
+    @include bootstrap.make-col-ready();
+    @include bootstrap.make-col(12);
+
+    @include bootstrap.media-breakpoint-up(sm) {
+        @include bootstrap.make-col(6);
+    }
+
+    @include bootstrap.media-breakpoint-up(lg) {
+        @include bootstrap.make-col(4);
+    }
+}

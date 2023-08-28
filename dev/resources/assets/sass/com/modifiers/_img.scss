@@ -1,0 +1,16 @@
+.img-contain {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-scale {
+  width: 100%;
+  object-fit: scale-down;
+}

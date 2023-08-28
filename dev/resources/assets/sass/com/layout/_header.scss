@@ -1,0 +1,8 @@
+@use '../abstracts';
+/* Main header section styles */
+
+.header-wrapper {
+    background: abstracts.$prag-black;
+    padding: 0.5rem 0;
+    min-height: 10vh;
+}

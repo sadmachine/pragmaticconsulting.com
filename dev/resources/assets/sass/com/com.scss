@@ -1,0 +1,27 @@
+/* Libraries available to all imported files */
+@use 'sass:color';
+/* Imports available to all imported files */
+@use 'bootstrap-scss/bootstrap' as *;
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');*/
+
+/* Import any vendor stylesheets and modules */
+@use 'vendor';
+
+/* Import sass meta-components */
+@use 'abstracts';
+
+/* Import our foundation/base element styles */
+@use 'base';
+
+/* Import styles for specific elements/components */
+@use 'components';
+
+/* Import layout styling */
+@use 'layout';
+
+/* Import 'general' modifiers */
+@use 'modifiers';
+
+/* Import page specific styles */
+@use 'pages';

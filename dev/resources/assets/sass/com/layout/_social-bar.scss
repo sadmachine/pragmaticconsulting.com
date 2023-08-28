@@ -1,0 +1,19 @@
+@use '../vendor/bootstrap';
+@use '../abstracts';
+
+.social-bar {
+    padding-bottom: 25px;
+    padding-right: 1vw;
+    position: fixed;
+    right: 0;
+    top: 25vh;
+    text-align: right;
+    z-index: 1;
+    color: white;
+}
+
+@include bootstrap.media-breakpoint-down(sm) {
+    .social-bar {
+        display: none;
+    }
+}

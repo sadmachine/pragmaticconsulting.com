@@ -1,0 +1,28 @@
+@use '../vendor/bootstrap';
+
+article#it-and-systems {
+    #erp-showcase {
+        > .row > div {
+            border-radius: 3px;
+            border: 2px dotted #ccc;
+            padding: 10px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    #datto-logo {
+        width: 75%;
+        @include bootstrap.media-breakpoint-down(lg) {
+            width: 40%;
+        }
+    }
+
+    .system-icon {
+        &:hover {
+            outline: 1px dashed #007bff66;
+        }
+    }
+}

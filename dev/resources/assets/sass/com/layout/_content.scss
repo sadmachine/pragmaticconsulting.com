@@ -1,0 +1,29 @@
+@use '../vendor/bootstrap';
+/* Main content section styles */
+
+.content-wrapper {
+    background-color: #efefef;
+
+    main {
+        width: 100%;
+        min-height: 69vh;
+    }
+}
+
+/* 
+ Todo: Think of a better way to do this, its hacky and bad practice 
+ */
+@include bootstrap.media-breakpoint-down(sm) {
+    .main-article {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-article > .row {
+        padding: 0;
+
+        > [class^="col-12"]:not(.col-card-client) {
+            padding: 0;
+        }
+    }
+}

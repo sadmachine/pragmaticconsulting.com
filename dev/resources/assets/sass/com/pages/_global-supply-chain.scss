@@ -1,0 +1,31 @@
+@use '../vendor/bootstrap';
+.list-col-2 {
+    li {
+        display: list-item;
+        width: 100%;
+        float: left;
+        &:last-child {
+            margin-bottom: 20px;
+        }
+
+        @include bootstrap.media-breakpoint-up(md) {
+            width: 50%;
+            float: left;
+        }
+        @include bootstrap.media-breakpoint-up(lg) {
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+#gsc-img-left {
+    width: 150px;
+    height: 150px;
+}
+
+#gsc-img-right {
+    width: 150px;
+    height: 150px;
+}

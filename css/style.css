@@ -1,0 +1,153 @@
+#logoheaderimg img {
+  width: 478px;
+  height: 95px;
+  vertical-align: bottom;
+}
+
+#center .content p, #center .content li {
+  font-size: 14pt;
+  text-align: justify;
+  line-height: 150%;
+}
+
+#center .praglink:link {
+  color: #EB0708;
+  transition: all .05s ease-in;
+}
+
+#center .praglink:hover {
+  color: rgba(235, 7, 8, .7);
+}
+
+#center p.center, .center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.clogotable td {
+  padding: 10px;
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+}
+
+#center .content .clogotable p {
+  text-align: center;
+}
+
+div.clogo {
+  width: 100%;
+  margin-top: 150px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+div.clogo>table {
+  width: 100%;
+  margin: auto;
+}
+
+div.clogo>table {
+  table-layout: fixed;
+  overflow-x: hidden;
+  border: none;
+  border-spacing: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#location-information {
+  width: 50%;
+  border-spacing: 0;
+  border: 0;
+  margin: auto;
+}
+
+#location-information th, #location-information td {
+  padding: 4px;
+  vertical-align: top;
+}
+
+/*
+  Convenience classes to remove deprecated HTML <h1 align="...">
+  text-left     => align="left"
+  text-right    => align="right"
+  text-center   => align="center"
+  text-justify  => align="justify"
+*/
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/*
+  Convenience classes to remove deprecated HTML <img align="...">
+  ----------------------------------------------------------------
+  align-bottom  => align="bottom"
+  align-middle  => align="middle"
+  align-top     => align="top"
+  align-left    => align="left"
+  align-right   => align="right"
+*/
+
+.img-left {
+  float: left;
+}
+
+.img-right {
+  float: right;
+}
+
+.img-bottom {
+  vertical-align: bottom;
+}
+
+.img-middle {
+  vertical-align: middle;
+}
+
+.img-top {
+  vertical-align: top;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-top {
+  vertical-align: top;
+}

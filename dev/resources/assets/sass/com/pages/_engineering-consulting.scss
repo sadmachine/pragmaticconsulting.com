@@ -1,0 +1,11 @@
+@use '../abstracts';
+
+.white-on-black {
+  color: abstracts.$off-white;
+  background: abstracts.$prag-black;
+  border-radius: .25rem;
+}
+
+.white-on-black > .icon-list__item {
+  border-bottom-color: abstracts.$off-white;
+}

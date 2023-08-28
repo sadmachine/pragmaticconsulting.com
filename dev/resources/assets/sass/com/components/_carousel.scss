@@ -1,0 +1,70 @@
+@use '../vendor/bootstrap';
+@use '../abstracts';
+
+.carousel {
+    margin: auto;
+
+    $max-height: 500px;
+    @include bootstrap.media-breakpoint-up(md) {
+        max-height: $max-height;
+    }
+
+    @media (min-width: 576px) {
+        margin-bottom: 40px;
+    }
+
+    &-item {
+        @include bootstrap.media-breakpoint-up(md) {
+            max-height: $max-height;
+        }
+
+        img {
+            height: auto;
+            object-fit: contain;
+            @include bootstrap.media-breakpoint-up(md) {
+                object-fit: cover;
+                max-height: $max-height;
+            }
+            object-position: center;
+        }
+    }
+
+    &-indicators {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    &-caption {
+        h5 {
+            width: auto !important;
+            max-width: 300px;
+
+            @include bootstrap.media-breakpoint-up(lg) {
+                max-width: 500px;
+            }
+
+            margin: auto;
+            padding: 20px 40px;
+            font-size: 1.1rem;
+            background-color: rgba(saturate(abstracts.$prag-red, 100%), 0.9);
+        }
+
+        h6 {
+            margin: auto;
+            width: auto !important;
+            padding: 10px 15px;
+            background-color: rgba(saturate(abstracts.$prag-red, 100%), 0.9);
+            position: relative;
+            top: 30px;
+            font-size: 1rem;
+        }
+    }
+}
+
+#leanCarousel {
+    @include abstracts.carousel-sizing(80vh);
+}
+
+#qualityCarousel {
+    @include abstracts.carousel-sizing(70vh);
+}

@@ -1,0 +1,18 @@
+@use 'abstracts' as *;
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'pages';
+@use 'skin';
+@use 'structure';
+@use 'theme';
+@use 'vendor';
+
+.carousel-item-thumbnail {
+    min-height: 50px;
+    max-height: 100px;
+
+    &:hover {
+        outline: 1px solid #007bff;
+    }
+}

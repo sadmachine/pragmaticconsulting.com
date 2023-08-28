@@ -1,0 +1,18 @@
+@use '../abstracts';
+/* Main footer section styles */
+
+// Todo: remove over specificity where possible
+
+.footer-wrapper {
+    border-top: 1px solid #666;
+    background-color: #fefefe;
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+
+    .fab,
+    .fas {
+        @include abstracts.social-icon(20px);
+    }
+}

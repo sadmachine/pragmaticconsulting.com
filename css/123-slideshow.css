@@ -1,0 +1,87 @@
+#gpoy {
+  position: absolute;
+  right: -150px;
+  top: 3px;
+  padding: 3px 7px 3px;
+  z-index: 99;
+  opacity: 0.6;
+  transition: 1s;
+}
+
+div#gpoy>a, div#gpoy>a:active, div#gpoy>a:visited {
+  font-weight: normal;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 7pt;
+  line-height: 10px;
+  font-family: arial;
+}
+
+.repper {
+  width: 506px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+.repper:hover #gpoy {
+  transition: 2s;
+  right: 3px;
+}
+
+#slider {
+  width: 500px;
+  height: 320px;
+  border: 3px solid #FFFFFF;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+  cursor: hand;
+  cursor: pointer
+}
+
+#slider .slides {
+  width: 6500px;
+  height: 320px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  width: 500px;
+  height: 320px;
+  float: left;
+  list-style-type: none;
+}
+
+.DIT170307 {
+  position: absolute;
+  max-width: 500px;
+  margin: 0px;
+}
+
+.c60024 {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #FFFFFF;
+  font-size: 24pt;
+  font-family: Tahoma;
+  text-align: center;
+  line-height: 48px;
+  z-index: 33;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#slideshow {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}

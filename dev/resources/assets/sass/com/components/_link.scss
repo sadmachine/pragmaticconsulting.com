@@ -1,0 +1,19 @@
+.link--no-decoration {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.link--overlay {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}

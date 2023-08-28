@@ -1,0 +1,6 @@
+@use '../abstracts';
+
+.color-off-white,
+%color-off-white {
+    color: abstracts.$off-white;
+}

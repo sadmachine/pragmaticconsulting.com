@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+.bg-prag-red {
+    background-color: abstracts.$prag-red;
+}
+
+.bg-prag-black {
+    background-color: abstracts.$prag-black;
+}
+
+.bg-off-white {
+    background-color: abstracts.$off-white;
+}

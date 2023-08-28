@@ -1,0 +1,95 @@
+@use '../abstracts';
+@use '../vendor/bootstrap';
+
+.border {
+    &-sm {
+        @include bootstrap.media-breakpoint-up(sm) {
+            border: 1px solid #dee2e6 !important;
+
+            &-bottom {
+                border-bottom: 1px solid #dee2e6 !important;
+            }
+
+            &-top {
+                border-top: 1px solid #dee2e6 !important;
+            }
+
+            &-left {
+                border-left: 1px solid #dee2e6 !important;
+            }
+            &-right {
+                border-right: 1px solid #dee2e6 !important;
+            }
+        }
+    }
+
+    &-md {
+        @include bootstrap.media-breakpoint-up(md) {
+            border: 1px solid #dee2e6 !important;
+
+            &-bottom {
+                border-bottom: 1px solid #dee2e6 !important;
+            }
+
+            &-top {
+                border-top: 1px solid #dee2e6 !important;
+            }
+
+            &-left {
+                border-left: 1px solid #dee2e6 !important;
+            }
+            &-right {
+                border-right: 1px solid #dee2e6 !important;
+            }
+        }
+    }
+
+    &-lg {
+        @include bootstrap.media-breakpoint-up(lg) {
+            border: 1px solid #dee2e6 !important;
+
+            &-bottom {
+                border-bottom: 1px solid #dee2e6 !important;
+            }
+
+            &-top {
+                border-top: 1px solid #dee2e6 !important;
+            }
+
+            &-left {
+                border-left: 1px solid #dee2e6 !important;
+            }
+            &-right {
+                border-right: 1px solid #dee2e6 !important;
+            }
+        }
+    }
+
+    &-xl {
+        @include bootstrap.media-breakpoint-up(xl) {
+            border: 1px solid #dee2e6 !important;
+
+            &-bottom {
+                border-bottom: 1px solid #dee2e6 !important;
+            }
+
+            &-top {
+                border-top: 1px solid #dee2e6 !important;
+            }
+
+            &-left {
+                border-left: 1px solid #dee2e6 !important;
+            }
+            &-right {
+                border-right: 1px solid #dee2e6 !important;
+            }
+        }
+    }
+
+    &-bottom {
+        &-prag {
+            padding-bottom: 5px;
+            border-bottom: 3px solid abstracts.$prag-red;
+        }
+    }
+}

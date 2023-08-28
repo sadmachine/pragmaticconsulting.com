@@ -1,0 +1,41 @@
+@use '../abstracts';
+@use '../vendor/bootstrap';
+.text {
+    &-sm-justify {
+        @include bootstrap.media-breakpoint-up(sm) {
+            text-align: justify;
+        }
+    }
+    &-md-justify {
+        @include bootstrap.media-breakpoint-up(md) {
+            text-align: justify;
+        }
+    }
+    &-lg-justify {
+        @include bootstrap.media-breakpoint-up(lg) {
+            text-align: justify;
+        }
+    }
+    &-xl-justify {
+        @include bootstrap.media-breakpoint-up(xl) {
+            text-align: justify;
+        }
+    }
+
+    &-prag {
+        color: abstracts.$prag-red;
+
+        &-block {
+            color: #fefefe;
+            background-color: abstracts.$prag-red;
+            padding: 20px;
+            box-shadow: 0px 1px 3px #aaa;
+        }
+    }
+}
+
+a.text-prag {
+    &:hover {
+        color: lighten(abstracts.$prag-red, 20%);
+    }
+}

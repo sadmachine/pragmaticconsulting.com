@@ -1,0 +1,255 @@
+@use '../abstracts';
+@use '../vendor/bootstrap';
+
+// Todo: Need to fix problem on mobile devices where dropdowns have to be clicked twice, and need to be closed before others can be opened
+/* Main navigation section styles */
+.nav-wrapper {
+    background-color: abstracts.$prag-red;
+    margin: 0;
+    padding: 0;
+
+    .nav-row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        height: 44px;
+        text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+        font-family: "Open Sans", sans-serif;
+        padding: 0;
+        background-color: abstracts.$prag-red;
+    }
+
+    .navbar-nav {
+        background-color: abstracts.$prag-red;
+        position: relative;
+        top: 44px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+    }
+
+    .navbar-expand-lg {
+        z-index: 2;
+    }
+
+    .navbar-collapse {
+        margin: 0px -30px;
+    }
+
+    .nav-item {
+        text-align: left;
+    }
+
+    .nav-link {
+        color: white;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s ease;
+        letter-spacing: 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px !important;
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        background-color: abstracts.$prag-red;
+        border-radius: 0;
+        position: relative;
+        top: 38px;
+        left: -1px;
+        z-index: 2;
+    }
+
+    .dropdown-toggle {
+        outline: none;
+        color: #fff;
+    }
+
+    .dropdown-item {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 50px;
+        font-size: 0.9rem;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #f7163b;
+            color: #fff;
+
+            .dropdown-content {
+                &:after {
+                    opacity: 1;
+                    right: -15px;
+                }
+            }
+        }
+
+        .dropdown-content {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            color: #fff;
+
+            &:after {
+                content: "\00bb";
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -5px;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+    .dropdown-subitem {
+        // Copied from bootstrap.dropdown-item
+        display: block;
+        width: 100%;
+        clear: both;
+        font-weight: 400;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+        font-size: 0.9rem;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #f7163b;
+            color: #fff;
+
+            .dropdown-content {
+                &:after {
+                    opacity: 1;
+                    right: -15px;
+                }
+            }
+        }
+
+        .dropdown-content {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            color: #fff;
+
+            &:after {
+                content: "\00bb";
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -5px;
+                transition: all 0.5s;
+            }
+
+            &:before {
+                content: "\2192\2002";
+            }
+        }
+    }
+}
+
+@include bootstrap.media-breakpoint-up(lg) {
+    .nav-wrapper {
+        background-color: abstracts.$prag-black;
+        min-height: 10vh;
+        border-bottom: 0.5rem solid abstracts.$prag-red;
+
+        .navbar {
+            height: 5.5rem;
+            background-color: abstracts.$prag-black;
+        }
+
+        .navbar-nav {
+            background-color: abstracts.$prag-black;
+            position: initial;
+            padding-bottom: 0px;
+        }
+
+        .navbar-collapse {
+            margin: 0 0;
+        }
+
+        .nav-item {
+            text-align: center;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            opacity: 1;
+            font-size: 0.9rem;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+
+            .nav-content {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: all 0.5s ease;
+                color: inherit;
+
+                &:after {
+                    content: "\00bb";
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -5px;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            &:hover {
+                padding-left: 0px;
+                padding-right: 0px;
+                background-color: abstracts.$prag-red;
+                color: #fff !important;
+                opacity: 1;
+
+                .nav-content {
+                    padding-right: 5px;
+                    margin-left: -5px;
+
+                    &:after {
+                        opacity: 1;
+                        right: -10px;
+                    }
+                }
+            }
+        }
+
+        .dropdown-item {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 15px;
+            padding-right: 25px;
+        }
+    }
+}
+
+@include bootstrap.media-breakpoint-up(xl) {
+    .nav-wrapper {
+        .nav-link {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+    }
+}

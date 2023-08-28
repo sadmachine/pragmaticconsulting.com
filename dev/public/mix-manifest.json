@@ -1,0 +1,8 @@
+{
+    "/js/com/app.js": "/js/com/app.js",
+    "/js/admin/articles.js": "/js/admin/articles.js",
+    "/js/admin/profiles.js": "/js/admin/profiles.js",
+    "/js/admin/admin.js": "/js/admin/admin.js",
+    "/js/admin/clients.js": "/js/admin/clients.js",
+    "/js/admin/carousels.js": "/js/admin/carousels.js"
+}

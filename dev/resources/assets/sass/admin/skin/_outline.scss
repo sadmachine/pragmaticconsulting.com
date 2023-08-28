@@ -1,0 +1,26 @@
+.outline,
+%outline {
+    &-none {
+        outline: none;
+    }
+
+    &-auto {
+        outline: auto;
+    }
+
+    &-dotted {
+        outline: dotted;
+    }
+
+    &-dashed {
+        outline: dashed;
+    }
+
+    &-solid {
+        outline-style: solid;
+    }
+
+    &-double {
+        outline-style: double;
+    }
+}

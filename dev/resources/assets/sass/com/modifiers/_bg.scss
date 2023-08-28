@@ -1,0 +1,20 @@
+@use '../abstracts';
+.bg-prag-red {
+    background: abstracts.$prag-red;
+}
+
+.bg-prag-black {
+    background: abstracts.$prag-black;
+}
+
+.bg-facebook {
+    background-color: #3b5998;
+}
+
+.bg-linkedin {
+    background-color: #007bb5;
+}
+
+.bg-twitter {
+    background-color: #55acee;
+}

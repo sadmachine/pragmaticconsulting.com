@@ -1,0 +1,44 @@
+@use '../abstracts';
+@use '../vendor/bootstrap' as bs;
+
+.menu-title {
+    padding: abstracts.$size-2 abstracts.$size-3;
+    display: block;
+}
+
+.menu-title--light {
+    color: bs.$gray-600;
+    transition: 0.1s all ease-in-out;
+    &:hover {
+        color: abstracts.$off-white;
+    }
+}
+
+.menu-item {
+    padding-top: abstracts.$size-2;
+    padding-bottom: abstracts.$size-2;
+    padding-left: abstracts.$size-5;
+    position: relative;
+}
+
+.menu-item--light {
+    color: darken(abstracts.$off-white, 50%);
+    &.active {
+        background: abstracts.$off-white;
+        color: abstracts.$prag-black;
+    }
+}
+
+.menu-item__link--light {
+    color: inherit;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        color: #fefefe;
+        text-decoration: none;
+    }
+
+    &.active {
+        color: inherit;
+    }
+}

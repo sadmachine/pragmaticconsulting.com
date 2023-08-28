@@ -1,0 +1,17 @@
+@use '../vendor/bootstrap';
+
+#import-export-icon-group {
+    font-size: 2rem;
+    @include bootstrap.media-breakpoint-up(sm) {
+        font-size: 2.5rem;
+    }
+    @include bootstrap.media-breakpoint-up(md) {
+        font-size: 3rem;
+    }
+    @include bootstrap.media-breakpoint-up(lg) {
+        font-size: 3.5rem;
+    }
+    @include bootstrap.media-breakpoint-up(xl) {
+        font-size: 3rem;
+    }
+}

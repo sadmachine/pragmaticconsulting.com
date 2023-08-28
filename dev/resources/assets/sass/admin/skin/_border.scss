@@ -1,0 +1,21 @@
+@use '../abstracts';
+
+.border-bottom-prag,
+%border-bottom-prag {
+    border-bottom: 1px solid abstracts.$prag-black;
+}
+
+.border-top-prag,
+%border-top-prag {
+    border-top: 1px solid abstracts.$prag-black;
+}
+
+.border-left-prag,
+%border-left-prag {
+    border-left: 1px solid abstracts.$prag-black;
+}
+
+.border-right-prag,
+%border-right-prag {
+    border-right: 1px solid abstracts.$prag-black;
+}

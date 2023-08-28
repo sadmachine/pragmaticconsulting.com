@@ -1,0 +1,8 @@
+@use '../vendor/bootstrap' as bs;
+
+@each $size, $length in bs.$spacers {
+    .top-#{$size},
+    %top-#{$size} {
+        top: $length !important;
+    }
+}

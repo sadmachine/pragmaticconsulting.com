@@ -1,0 +1,44 @@
+@use '../abstracts';
+@use 'link';
+
+.social-icon--20 {
+    @include abstracts.social-icon(20px);
+}
+
+.social-icon--25 {
+    @include abstracts.social-icon(25px);
+}
+
+.social-icon--facebook {
+    color: white;
+    background-color: abstracts.$facebook-blue;
+}
+
+.social-icon--linkedin {
+    color: white;
+    background-color: abstracts.$linkedin-blue;
+}
+
+.social-icon--twitter {
+    color: white;
+    background-color: abstracts.$twitter-blue;
+}
+
+.social-icon--prag {
+    color: white;
+    background-color: abstracts.$prag-red;
+}
+
+.social-icon--overlay {
+    text-decoration: none;
+    opacity: 0.8;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+        opacity: 1;
+    }
+}

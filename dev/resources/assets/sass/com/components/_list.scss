@@ -1,0 +1,130 @@
+@use '../abstracts';
+
+ul.list {
+    &-group-icons {
+        .list-group-item {
+            position: relative;
+            box-shadow: none;
+            transition: box-shadow 0.15s ease-in;
+            z-index: inherit;
+            padding-left: 5px;
+
+            .col-auto {
+                text-align: center;
+            }
+
+            i {
+                text-align: center;
+                width: 45px;
+            }
+        }
+        > li {
+            > ul {
+                > li {
+                    border-width: 0 !important;
+
+                    .col-auto:before {
+                        content: "\21AA";
+                        line-height: inherit;
+                        padding-left: 40px;
+                    }
+
+                    i {
+                        text-align: left;
+                        width: 10px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-group:not(.list-group-icons) {
+        > li.link.indented {
+            padding-left: 40px;
+        }
+
+        > li:not(.link) {
+            > ul {
+                > li:not(.link) {
+                    margin-left: 0;
+                    margin-right: 0;
+                    padding-left: 40px !important;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    border-width: 0 !important;
+
+                    &:before {
+                        content: "\21AA";
+                        line-height: inherit;
+                        position: relative;
+                        left: -25px;
+                        margin-right: -16px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+ol.list-group-numbered {
+    list-style: none;
+    counter-reset: olnumbering;
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+        align-items: center !important;
+        padding: 15px 20px;
+        display: flex;
+        counter-increment: olnumbering;
+
+        &::before {
+            content: counter(olnumbering);
+            display: inline-block;
+            text-align: center;
+            padding: 5px 12px;
+            margin-right: 25px;
+            margin-left: 10px;
+            border-radius: 50%;
+            color: white;
+            background: abstracts.$prag-red;
+        }
+
+        &:last-child {
+            border-width: 0px;
+        }
+    }
+}
+
+li.list-group-item.link {
+    transition: all 0.15s ease;
+
+    &:hover {
+        z-index: 1;
+        box-shadow: 0px 0px 5px #ccc;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    span:last-child {
+        opacity: 0.2;
+        transition: all 0.15s ease;
+    }
+
+    &:hover span {
+        opacity: 1;
+    }
+}

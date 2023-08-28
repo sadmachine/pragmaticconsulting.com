@@ -1,0 +1,1 @@
+$('.ql-render div').has('br').css('line-height', '1rem');

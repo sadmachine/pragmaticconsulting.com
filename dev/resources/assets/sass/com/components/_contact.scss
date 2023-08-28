@@ -1,0 +1,20 @@
+@use '../vendor/bootstrap';
+
+#contact-wrapper {
+    position: fixed;
+    right: 0px;
+    @include bootstrap.media-breakpoint-up(sm) {
+        right: 20px;
+    }
+    @include bootstrap.media-breakpoint-up(md) {
+        right: 40px;
+    }
+    @include bootstrap.media-breakpoint-up(lg) {
+        right: 80px;
+    }
+    @include bootstrap.media-breakpoint-up(xl) {
+        right: 100px;
+    }
+    bottom: 70px;
+    z-index: 4;
+}
