@@ -184,7 +184,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link contact" href="{{ route('contact-get', env('ROUTE_EXT', '')) }}"><span
+              <a class="nav-link contact" href="{{ route('contact', env('ROUTE_EXT', '')) }}"><span
                   class="nav-content">Contact</span></a>
             </li>
           </ul>
