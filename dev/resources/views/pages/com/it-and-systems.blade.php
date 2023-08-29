@@ -51,7 +51,7 @@
       </article>
     </section>
   </div>
-  <div class="row">
+  <div class="row mb-5">
     <section class="col-12 col-lg-5 order-1 order-lg-2">
       <article class="card py-0" data-aos="fade-left">
         <section class="card-body py-3" id="erp-showcase">
@@ -218,24 +218,6 @@
             For more information on our Evaluation and ERP Selection services, <a href="contact.php">get in touch</a>.
           </strong>
         </aside>
-      </article>
-    </section>
-  </div>
-  <div class="row justify-content-center">
-    <section class="col-auto">
-      <article class="card" data-aos="fade-in">
-        <section class="card-body">
-          <div class="row justify-content-around align-items-center mx-lg-5">
-            <div class="col-12 pb-3 text-center">
-              <h3>
-                Strategic Alliances
-              </h3>
-            </div>
-            <div class="col-12 col-lg-auto text-center pb-3">
-              <img class="img-fluid" id="datto-logo" src="{{ resource('img/logos/datto.png') }}" />
-            </div>
-          </div>
-        </section>
       </article>
     </section>
   </div>
