@@ -14,7 +14,7 @@ define('EXTENSION_REGEX', '(' . env('ROUTE_EXT') . ')?');
 \*------------------------------------*/
 
 Route::prefix(env('APP_PREFIX', ''))->group(function() {
-    Route::any(env('HOME_ROUTE', '/home') . '{ext}', 'Com\GetController@home')
+    Route::any(env('HOME_ROUTE', '/home{ext}'), 'Com\GetController@home')
         ->where('ext', EXTENSION_REGEX)
         ->name('home');
     // About
