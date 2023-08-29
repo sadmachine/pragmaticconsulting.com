@@ -96,7 +96,7 @@
   </div>
 @show
 
-<script src="{{ asset('js/com/app.js') }}"></script>
+<script src="{{ resource('js/com/app.js') }}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 @yield('js')
