@@ -14,6 +14,29 @@ define('EXTENSION_REGEX', '(' . env('ROUTE_EXT') . ')?');
 \*------------------------------------*/
 
 Route::prefix(env('APP_PREFIX', ''))->group(function() {
+
+    /*------------------------------------*\
+    # Helpful Redirects
+    \*------------------------------------*/
+
+    /**
+     * Handle any legacy links which contain the ".php" suffix
+     * 
+     * This is done by rerouting "/page.php" to "/page"
+     */
+    Route::get('{pagename}.php', function ($pagename) {
+        return redirect(route($pagename, ''));
+    })->where('pagename', '[A-Za-z0-9-]+');
+
+
+    /**
+     * Force an empty url ending to redirect to '/home'
+     */
+    Route::get('', function () {
+        return redirect(route('home'));
+    });
+
+
     Route::any(env('HOME_ROUTE', '/home{ext}'), 'Com\GetController@home')
         ->where('ext', EXTENSION_REGEX)
         ->name('home');
@@ -172,26 +195,6 @@ Route::prefix(env('APP_PREFIX', ''))->group(function() {
 
 
 
-    /*------------------------------------*\
-    # Helpful Redirects
-    \*------------------------------------*/
-
-    /**
-     * Handle any legacy links which contain the ".php" suffix
-     * 
-     * This is done by rerouting "/page.php" to "/page"
-     */
-    Route::get('{pagename}.php', function ($pagename) {
-        return redirect('/' . $pagename);
-    })->where('pagename', '[A-Za-z0-9-]+');
-
-
-    /**
-     * Force an empty url ending to redirect to '/home'
-     */
-    Route::get('', function () {
-        return redirect(route('home'));
-    });
 
     /*------------------------------------*\
     # Auth Routes
