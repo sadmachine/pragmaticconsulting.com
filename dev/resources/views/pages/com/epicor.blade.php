@@ -15,13 +15,12 @@
           <div class="media">
             <div class="media-body">
               <p class="lead">
-                Our <a href="supply-chain.php">Supply Chain</a> & <a href="it-and-systems.php">IT Systems</a> experts have
+                As an Epicor Certified Service Provider, our <a href="it-and-systems.php">IT and Systems</a> experts have
                 extensive experience successfully implementing <strong>Epicor</strong> and many related ERP projects. This
                 includes many years of evolving with the software product from the days of the Vantage software to the
-                latest versions of the systems, as well as several sub-system related systems solutions.
-                <span class="text-prag">Pragmatic’s</span> team works with the customer to utilize our experience
-                having
-                <em>completed nearly 100 ERP implementations</em>.<br />
+                latest versions including Kinetic and Prophet 21, as well as several sub-system related systems solutions.
+                <span class="text-prag text-bold">Pragmatic’s</span> team works with the customer to utilize our
+                experience having <em>completed nearly 100 ERP implementations</em>.<br>
               </p> <!-- .lead -->
               <a href="contact.php" class="btn btn-prag" role="button">Get in touch</a>
             </div> <!-- .media-body -->
@@ -325,7 +324,7 @@
             </figure>
             <div class="media-body">
               <p>
-                <span class="text-prag">Pragmatic's</span> broad implementation expertise allows us to get the most
+                <span class="text-prag">Pragmatic's</span> broad implementation proficiency allows us to get the most
                 out of
                 your investment with a <strong>Total Systems</strong> approach throughout the extended supply chain from
                 forecasting, <em>quote to cash</em>, and beyond. Thus, whether it be planning and scheduling, the MES
@@ -361,7 +360,8 @@
               <strong>Epicor</strong> is a state of the art fully integrated <em>ERP</em> (Enterprise Resource Planning)
               software for running a wide
               range of businesses. Its latest version is an excellent, fully integrated ERP solution with enhanced
-              features, particularly around its cloud capability. This is a very good middle market software solution that
+              features, particularly around its cloud capability. This is a highly efficient middle market software
+              solution that
               can be LAN or Cloud based, SaaS, and hosted. It possesses a full host of features required to run a fully
               integrated solution for your company.
             </p>
