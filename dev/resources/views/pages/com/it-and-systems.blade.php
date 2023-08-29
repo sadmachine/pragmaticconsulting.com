@@ -64,22 +64,22 @@
               </div>
               <div class="row align-items-center justify-content-center">
                 <div class="col">
-                  <a class="system-icon" href="jdedwards.php" data-toggle="tooltip" data-placement="bottom"
-                    title="JD Edwards System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/jdedwards.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="jdedwards.php" data-toggle="tooltip" data-placement="bottom"
+                    title="JD Edwards System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/jdedwards.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="sap.php" data-toggle="tooltip" data-placement="bottom"
-                    title="SAP System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/sap.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="sap.php" data-toggle="tooltip" data-placement="bottom"
+                    title="SAP System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/sap.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="syspro.php" data-toggle="tooltip" data-placement="bottom"
-                    title="SysPro System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/syspro.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="syspro.php" data-toggle="tooltip" data-placement="bottom"
+                    title="SysPro System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/syspro.png') }}" />
+                  {{-- </a> --}}
                 </div>
               </div>
             </div>
@@ -94,41 +94,41 @@
               <div class="row mb-2 align-items-center">
                 <div class="col">
                   <a class="system-icon" href="epicor.php" data-toggle="tooltip" data-placement="bottom"
-                    title="Epicor System Info">
+                    title="Epicor System Info &#x1F517;">
                     <img class="img-fluid" src="{{ resource('img/logos/epicor.jpg') }}" />
                   </a>
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="dynamics.php" data-toggle="tooltip" data-placement="bottom"
-                    title="Dynamics System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/dynamics.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="dynamics.php" data-toggle="tooltip" data-placement="bottom"
+                    title="Dynamics System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/dynamics.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col text-center">
-                  <a class="system-icon" href="infor.php" data-toggle="tooltip" data-placement="bottom"
-                    title="Infor System Info">
-                    <img class="img-fluid" style="max-height: 100px;" src="{{ resource('img/logos/syteline.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="infor.php" data-toggle="tooltip" data-placement="bottom"
+                    title="Infor System Info &#x1F517;"> --}}
+                  <img class="img-fluid" style="max-height: 100px;" src="{{ resource('img/logos/syteline.png') }}" />
+                  {{-- </a> --}}
                 </div>
               </div>
               <div class="row align-items-center">
                 <div class="col">
-                  <a class="system-icon" href="globalshop.php" data-toggle="tooltip" data-placement="bottom"
-                    title="GlobalShop System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/globalshop.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="globalshop.php" data-toggle="tooltip" data-placement="bottom"
+                    title="GlobalShop System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/globalshop.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="iqms.php" data-toggle="tooltip" data-placement="bottom"
-                    title="IQMS System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/iqms.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="iqms.php" data-toggle="tooltip" data-placement="bottom"
+                    title="IQMS System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/iqms.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="traverse.php" data-toggle="tooltip" data-placement="bottom"
-                    title="Traverse System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/traverse.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="traverse.php" data-toggle="tooltip" data-placement="bottom"
+                    title="Traverse System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/traverse.png') }}" />
+                  {{-- </a> --}}
                 </div>
               </div>
             </div>
@@ -142,22 +142,22 @@
               </div>
               <div class="row align-items-center">
                 <div class="col text-center">
-                  <a class="system-icon" href="e2.php" data-toggle="tooltip" data-placement="bottom"
-                    title="E2 Mfg Info">
-                    <img class="img-fluid" style="max-height: 75px;" src="{{ resource('img/logos/e2.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="e2.php" data-toggle="tooltip" data-placement="bottom"
+                    title="E2 Mfg Info &#x1F517;"> --}}
+                  <img class="img-fluid" style="max-height: 75px;" src="{{ resource('img/logos/e2.png') }}" />
+                  {{-- </a> --}}
                 </div>
                 <div class="col">
                   <a class="system-icon" href="https://www.pragmaticdba.com/" data-toggle="tooltip"
-                    data-placement="bottom" title="DBA Manufacturing Info">
+                    data-placement="bottom" title="DBA Manufacturing Info &#x1F517;">
                     <img class="img-fluid" src="{{ resource('img/logos/dba-mfg-new-removebg.png') }}" />
                   </a>
                 </div>
                 <div class="col">
-                  <a class="system-icon" href="fishbowl.php" data-toggle="tooltip" data-placement="bottom"
-                    title="Fishbowl System Info">
-                    <img class="img-fluid" src="{{ resource('img/logos/fishbowl.png') }}" />
-                  </a>
+                  {{-- <a class="system-icon" href="fishbowl.php" data-toggle="tooltip" data-placement="bottom"
+                    title="Fishbowl System Info &#x1F517;"> --}}
+                  <img class="img-fluid" src="{{ resource('img/logos/fishbowl.png') }}" />
+                  {{-- </a> --}}
                 </div>
               </div>
             </div>
