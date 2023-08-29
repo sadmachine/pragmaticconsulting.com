@@ -9,7 +9,7 @@
       <section class="card" data-aos="fade-up">
         <div class="card-body">
           <figure class="d-block d-lg-none w-100 mx-auto mb-3">
-            <img class="img-fluid" src="{{ asset('img/erp/epicor-interface.png') }}" alt="Epicor 10 Interface" />
+            <img class="img-fluid" src="{{ resource('img/erp/epicor-interface.png') }}" alt="Epicor 10 Interface" />
             <figcaption>Epicor Main Environment</figcaption>
           </figure> <!-- .d-(block|lg-none) .w-100 .m(x-auto|b-3) -->
           <div class="media">
@@ -26,7 +26,7 @@
               <a href="contact.php" class="btn btn-prag" role="button">Get in touch</a>
             </div> <!-- .media-body -->
             <figure class="d-none d-lg-inline-block w-40 ml-3 align-self-center">
-              <img class="img-fluid" src="{{ asset('img/erp/epicor-interface.png') }}" alt="Epicor 10 Interface" />
+              <img class="img-fluid" src="{{ resource('img/erp/epicor-interface.png') }}" alt="Epicor 10 Interface" />
               <figcaption>Epicor Main Environment</figcaption>
             </figure> <!-- .d-(none|lg-inline-block) .w-40 .ml-3 .align-self-center -->
           </div> <!-- .media -->
@@ -315,12 +315,12 @@
         <h4 class="card-header text-center">Our Approach</h4>
         <div class="card-body">
           <figure class="d-block d-md-none w-100 w-sm-65 mx-auto mb-3">
-            <img class="img-fluid" src="{{ asset('img/erp/mes-interface.png') }}" alt="Epicor MES Interface" />
+            <img class="img-fluid" src="{{ resource('img/erp/MES-interface.png') }}" alt="Epicor MES Interface" />
             <figcaption>Epicor MES (Manufacturing Execution System) Environment</figcaption>
           </figure>
           <div class="media">
             <figure class="d-none d-md-inline-block w-40 mr-3 mb-2 align-self-center">
-              <img class="img-fluid" src="{{ asset('img/erp/mes-interface.png') }}" alt="Epicor MES Interface" />
+              <img class="img-fluid" src="{{ resource('img/erp/MES-interface.png') }}" alt="Epicor MES Interface" />
               <figcaption>Epicor MES (Manufacturing Execution System) Environment</figcaption>
             </figure>
             <div class="media-body">
