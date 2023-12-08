@@ -1,16 +1,16 @@
 Options -Indexes
 
 <IfModule mod_rewrite.c>
-
   RewriteEngine On
 
-  RewriteCond %{REQUEST_FILENAME} (it-and-systems|epicor)(.php)?$
-  RewriteRule (it-and-systems|epicor)(.php)?$ dev/public/index.php [L,NC]
+  # RewriteCond %{REQUEST_FILENAME} epicor(.php)?$
+  # RewriteRule epicor(.php)?$ dev/public/index.php [L,NC]
 
   RewriteCond %{REQUEST_URI} ^/$
   RewriteRule ^ /index.php [L,NC]
 
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^ dev/public/index.php [L,NC]
+  # RewriteCond %{REQUEST_FILENAME} !-f
+  # RewriteRule ^ dev/public/index.php [L,NC]
+
 
 </IfModule>
