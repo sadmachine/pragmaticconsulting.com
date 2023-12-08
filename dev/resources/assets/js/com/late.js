@@ -5,35 +5,39 @@
  * [2] If another nav item is hovered over (not a dropdown), unexpand all expanded dropdowns
  */
 function customNavHoverStates() {
-  // [1]
-  $(".dropdown-toggle").hover(
-    function() {
-      if ($(this).attr("aria-expanded") == "false") {
-        $(this).dropdown("toggle");
-      }
-    },
-    function() {}
-  );
-  // [2]
-  $(".nav-item:not(.dropdown)").hover(
-    function() {
-      var dropdownToggle = $(".navbar-nav").find('[aria-expanded="true"]');
-      if (dropdownToggle != "undefined") {
-        dropdownToggle.dropdown("toggle");
-      }
-    },
-    function() {}
-  );
+    // [1]
+    $(".dropdown-toggle").hover(
+        function () {
+            if ($(this).attr("aria-expanded") == "false") {
+                $(this).dropdown("toggle");
+            }
+        },
+        function () {}
+    );
+    // [2]
+    $(".nav-item:not(.dropdown)").hover(
+        function () {
+            var dropdownToggle = $(".navbar-nav").find(
+                '[aria-expanded="true"]'
+            );
+            if (dropdownToggle != "undefined") {
+                dropdownToggle.dropdown("toggle");
+            }
+        },
+        function () {}
+    );
 }
 
 /**
  * Adds the copyright year and text to the footer of the page.
  */
 function addCopyrightDate() {
-  var mydate = new Date();
-  var year = mydate.getYear();
-  if (year < 2000) year += year < 1900 ? 1900 : 0;
-  $("#copyrightDate").html("&copy; " + year + " Pragmatic Consulting, Inc All Rights Reserved");
+    var mydate = new Date();
+    var year = mydate.getYear();
+    if (year < 2000) year += year < 1900 ? 1900 : 0;
+    $("#copyrightDate").html(
+        "&copy; " + year + " Pragmatic Consulting, Inc All Rights Reserved"
+    );
 }
 
 /**
@@ -43,20 +47,20 @@ function addCopyrightDate() {
  *     - Animation duration of 800ms
  */
 function initAOS() {
-  // [1]
-  const pref = window.matchMedia("(prefers-reduced-motion: no-preference)");
-  if (pref.matches) {
-    AOS.init({ once: true, duration: 800 }); // [2]
-  } else {
-    AOS.init({ disable: true });
-  }
+    // [1]
+    const pref = window.matchMedia("(prefers-reduced-motion: no-preference)");
+    if (pref.matches) {
+        AOS.init({ once: true, duration: 800 }); // [2]
+    } else {
+        AOS.init({ disable: true });
+    }
 }
 
 /**
  * Opts-in to bootstrap tooltips.
  */
 function initTooltips() {
-  $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 }
 
 /**
@@ -69,57 +73,59 @@ function initTooltips() {
  * [5] If the position of the bottom of the screen is past the center of the footer, hide the social_bar. Otherwise, show the social_bar.
  */
 function handleSocialBarStates() {
-  // [1]
-  var social_bar = $("#social-bar");
-  var footer_wrapper = $("#footer-wrapper");
-  $(window).on("scroll", function() {
-    // [2]
-    if ($(this).width() > 500) {
-      // [3]
-      var footer_wrapper_top = footer_wrapper.offset().top;
-      var footer_wrapper_height = footer_wrapper.height();
-      var footer_wrapper_center = footer_wrapper_top + footer_wrapper_height / 2;
-      // [4]
-      var scroll_top = $(this).scrollTop();
-      var viewport_height = $(this).height();
-      var scroll_top_bottom = scroll_top + viewport_height;
-      // [5]
-      if (scroll_top_bottom >= footer_wrapper_center) social_bar.fadeOut();
-      if (scroll_top_bottom < footer_wrapper_center) social_bar.fadeIn();
-    } else {
-      social_bar.css("display", "none");
-    }
-  });
+    // [1]
+    var social_bar = $("#social-bar");
+    var footer_wrapper = $("#footer-wrapper");
+    $(window).on("scroll", function () {
+        // [2]
+        if ($(this).width() > 500) {
+            // [3]
+            var footer_wrapper_top = footer_wrapper.offset().top;
+            var footer_wrapper_height = footer_wrapper.height();
+            var footer_wrapper_center =
+                footer_wrapper_top + footer_wrapper_height / 2;
+            // [4]
+            var scroll_top = $(this).scrollTop();
+            var viewport_height = $(this).height();
+            var scroll_top_bottom = scroll_top + viewport_height;
+            // [5]
+            if (scroll_top_bottom >= footer_wrapper_center)
+                social_bar.fadeOut();
+            if (scroll_top_bottom < footer_wrapper_center) social_bar.fadeIn();
+        } else {
+            social_bar.css("display", "none");
+        }
+    });
 }
 
 // carousel.js
 function customCarouselEvents() {
-  $(".carousel").on("slide.bs.carousel", function(event) {
-    if (event.direction == "left") {
-      var $nextNextImage = $(".carousel-item.active", this)
-        .next(".carousel-item")
-        .next(".carousel-item")
-        .find("img");
-      $nextNextImage.attr("src", $nextNextImage.data("src"));
-    } else {
-      var $prevImage = $(".carousel-item.active", this)
-        .prev(".carousel-item")
-        .find("img");
-      var $prevPrevImage = $(".carousel-item.active", this)
-        .prev(".carousel-item")
-        .prev(".carousel-item")
-        .find("img");
-      $prevImage.attr("src", $prevImage.data("src"));
-      $prevPrevImage.attr("src", $prevPrevImage.data("src"));
-    }
-  });
+    $(".carousel").on("slide.bs.carousel", function (event) {
+        if (event.direction == "left") {
+            var $nextNextImage = $(".carousel-item.active", this)
+                .next(".carousel-item")
+                .next(".carousel-item")
+                .find("img");
+            $nextNextImage.attr("src", $nextNextImage.data("src"));
+        } else {
+            var $prevImage = $(".carousel-item.active", this)
+                .prev(".carousel-item")
+                .find("img");
+            var $prevPrevImage = $(".carousel-item.active", this)
+                .prev(".carousel-item")
+                .prev(".carousel-item")
+                .find("img");
+            $prevImage.attr("src", $prevImage.data("src"));
+            $prevPrevImage.attr("src", $prevPrevImage.data("src"));
+        }
+    });
 }
 
-$(function() {
-  customNavHoverStates();
-  addCopyrightDate();
-  initAOS();
-  initTooltips();
-  handleSocialBarStates();
-  customCarouselEvents();
+$(function () {
+    customNavHoverStates();
+    addCopyrightDate();
+    initAOS();
+    initTooltips();
+    // handleSocialBarStates();
+    customCarouselEvents();
 });
