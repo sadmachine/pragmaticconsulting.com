@@ -283,7 +283,7 @@ EMAIL;
             unset($_SESSION['errors']);
         }
 
-        return view('pages.com.contact', [
+        return view('shares.pages.contact', [
             'errors' => $errors
         ]);
     }

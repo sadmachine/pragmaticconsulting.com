@@ -12,11 +12,11 @@ class GetController extends Controller
     {
         $article = Article::where('slug', $article_slug)->first();
         if ($article != NULL) {
-            return view('pages.com.articles.display', [
+            return view('shared.pages.articles.display', [
                 'article' => $article,
             ]);
         } else {
-            return view('pages.com.articles.unknown');
+            return view('shared.pages.articles.unknown');
         }
     }
 
@@ -41,7 +41,7 @@ class GetController extends Controller
             'event_links' => json_encode($event_links)
         ];
 
-        return view('pages.com.news-and-events', $context);
+        return view('shared.pages.news-and-events', $context);
     }
 
     public function boardOfAdvisors()
@@ -49,67 +49,67 @@ class GetController extends Controller
         $context = [
             'profiles' => Profile::where('page', 'board-of-advisors')->orderBy('ord', 'asc')->get()
         ];
-        return view('pages.com.board-of-advisors', $context);
+        return view('shared.pages.board-of-advisors', $context);
     }
 
     public function ceoCoo()
     {
-        return view('pages.com.ceo-coo');
+        return view('shared.pages.ceo-coo');
     }
 
     public function cfo()
     {
-        return view('pages.com.cfo');
+        return view('shared.pages.cfo');
     }
 
     public function chro()
     {
-        return view('pages.com.chro');
+        return view('shared.pages.chro');
     }
 
     public function cioCto()
     {
-        return view('pages.com.cio-cto');
+        return view('shared.pages.cio-cto');
     }
 
     public function compliance()
     {
-        return view('pages.com.compliance');
+        return view('shared.pages.compliance');
     }
 
     public function dynamics()
     {
-        return view('pages.com.dynamics');
+        return view('shared.pages.dynamics');
     }
 
     public function e2()
     {
-        return view('pages.com.e2');
+        return view('shared.pages.e2');
     }
 
     public function engineeringConsulting()
     {
-        return view('pages.com.engineering-consulting');
+        return view('shared.pages.engineering-consulting');
     }
 
     public function epicor()
     {
-        return view('pages.com.epicor');
+        return view('shared.pages.epicor');
     }
 
     public function fishbowl()
     {
-        return view('pages.com.fishbowl');
+        return view('shared.pages.fishbowl');
     }
 
     public function globalSupplyChain()
     {
-        return view('pages.com.global-supply-chain');
+        return view('shared.pages.global-supply-chain');
     }
 
     public function globalshop()
     {
-        return view('pages.com.globalshop');
+        return view('shared.pages.globalshop');
     }
 
     public function home()
@@ -152,52 +152,52 @@ class GetController extends Controller
             ])
         ];
 
-        return view('pages.com.home', $context);
+        return view('shared.pages.home', $context);
     }
 
     public function humanCapital()
     {
-        return view('pages.com.human-capital');
+        return view('shared.pages.human-capital');
     }
 
     public function importExport()
     {
-        return view('pages.com.import-export');
+        return view('shared.pages.import-export');
     }
 
     public function industries()
     {
-        return view('pages.com.industries');
+        return view('shared.pages.industries');
     }
 
     public function infor()
     {
-        return view('pages.com.infor');
+        return view('shared.pages.infor');
     }
 
     public function interimExecutive()
     {
-        return view('pages.com.interim-executive');
+        return view('shared.pages.interim-executive');
     }
 
     public function iqms()
     {
-        return view('pages.com.iqms');
+        return view('shared.pages.iqms');
     }
 
     public function iso9000()
     {
-        return view('pages.com.iso9000');
+        return view('shared.pages.iso9000');
     }
 
     public function itAndSystems()
     {
-        return view('pages.com.it-and-systems');
+        return view('shared.pages.it-and-systems');
     }
 
     public function jdedwards()
     {
-        return view('pages.com.jdedwards');
+        return view('shared.pages.jdedwards');
     }
 
     public function leanSixSigma()
@@ -205,12 +205,12 @@ class GetController extends Controller
         $context = [
             'carousel_obj' => Page::where('name', 'lean-six-sigma')->first()->carousel
         ];
-        return view('pages.com.lean-six-sigma', $context);
+        return view('shared.pages.lean-six-sigma', $context);
     }
 
     public function location()
     {
-        return view('pages.com.location');
+        return view('shared.pages.location');
     }
 
     public function meetOurTeam()
@@ -218,7 +218,7 @@ class GetController extends Controller
         $context = [
             'profiles' => Profile::where('page', 'meet-our-team')->orderBy('ord', 'asc')->get()
         ];
-        return view('pages.com.meet-our-team', $context);
+        return view('shared.pages.meet-our-team', $context);
     }
 
     public function officers()
@@ -227,7 +227,7 @@ class GetController extends Controller
             'profiles' => Profile::where('page', 'officers')->orderBy('ord', 'asc')->get()
         ];
 
-        return view('pages.com.officers', $context);
+        return view('shared.pages.officers', $context);
     }
 
     public function ourClients()
@@ -235,27 +235,27 @@ class GetController extends Controller
         $context = [
             'clients' => Client::orderBy('name', 'asc')->get()
         ];
-        return view('pages.com.our-clients', $context);
+        return view('shared.pages.our-clients', $context);
     }
 
     public function overview()
     {
-        return view('pages.com.overview');
+        return view('shared.pages.overview');
     }
 
     public function privacyPolicy()
     {
-        return view('pages.com.privacy-policy');
+        return view('shared.pages.privacy-policy');
     }
 
     public function problemSolving()
     {
-        return view('pages.com.problem-solving');
+        return view('shared.pages.problem-solving');
     }
 
     public function projectManagement()
     {
-        return view('pages.com.project-management');
+        return view('shared.pages.project-management');
     }
 
     public function qualitySystems()
@@ -263,41 +263,41 @@ class GetController extends Controller
         $context = [
             'carousel_obj' => Page::where('name', 'quality-systems')->first()->carousel
         ];
-        return view('pages.com.quality-systems', $context);
+        return view('shared.pages.quality-systems', $context);
     }
 
     public function salesAndMarketing()
     {
-        return view('pages.com.sales-and-marketing');
+        return view('shared.pages.sales-and-marketing');
     }
 
     public function sap()
     {
-        return view('pages.com.sap');
+        return view('shared.pages.sap');
     }
 
     public function security()
     {
-        return view('pages.com.security');
+        return view('shared.pages.security');
     }
 
     public function supplyChainExamples()
     {
-        return view('pages.com.supply-chain-examples');
+        return view('shared.pages.supply-chain-examples');
     }
 
     public function supplyChain()
     {
-        return view('pages.com.supply-chain');
+        return view('shared.pages.supply-chain');
     }
 
     public function syspro()
     {
-        return view('pages.com.syspro');
+        return view('shared.pages.syspro');
     }
 
     public function traverse()
     {
-        return view('pages.com.traverse');
+        return view('shared.pages.traverse');
     }
 }

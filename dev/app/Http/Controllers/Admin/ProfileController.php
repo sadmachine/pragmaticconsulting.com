@@ -58,7 +58,7 @@ class ProfileController extends Controller
         $context['order'] = $order;
         $context['profiles'] = $profiles;
 
-        return view('pages.admin.profiles', $context);
+        return view('shares.pages.admin.profiles', $context);
     }
 
 

@@ -55,7 +55,7 @@ class CarouselController extends Controller
             $used_pages[] = $carousel->page_id;
         }
         $context['pages'] = App\Page::whereNotIn('id', $used_pages)->get();
-        return view('pages.admin.carousels', $context);
+        return view('shares.pages.admin.carousels', $context);
     }
 
 

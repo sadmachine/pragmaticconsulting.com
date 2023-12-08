@@ -46,7 +46,7 @@ class ArticleController extends Controller
         $context['articles']['news'] = Article::allNews();
         $context['articles']['events'] = Article::allEvents();
 
-        return view('pages.admin.articles', $context);
+        return view('shares.pages.admin.articles', $context);
     }
 
     /*------------------------------------*\
