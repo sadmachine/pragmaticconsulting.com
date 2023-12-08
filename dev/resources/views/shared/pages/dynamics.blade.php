@@ -111,7 +111,7 @@
           </p>
           <p>
             For more information, please <a href="contact.php">contact us</a> or check out some of our other relevant
-            pages.
+            shares.pages.
           </p>
         </div>
         <aside class="card-footer">

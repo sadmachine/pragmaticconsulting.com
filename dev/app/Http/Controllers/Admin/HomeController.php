@@ -20,6 +20,6 @@ class HomeController extends Controller
 
     public function render($context = [])
     {
-        return view('pages.admin.index', $context);
+        return view('shares.pages.admin.index', $context);
     }
 }

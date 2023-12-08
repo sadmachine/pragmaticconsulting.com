@@ -48,7 +48,7 @@ class ClientController extends Controller
         }
 
         $context['clients'] = $clients;
-        return view('pages.admin.clients', $context);
+        return view('shares.pages.admin.clients', $context);
     }
 
 

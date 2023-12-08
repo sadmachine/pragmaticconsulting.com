@@ -1,8 +1,14 @@
 {
     "/js/com/app.js": "/js/com/app.js",
-    "/js/admin/articles.js": "/js/admin/articles.js",
+    "/js/com/app.js.map": "/js/com/app.js.map",
     "/js/admin/profiles.js": "/js/admin/profiles.js",
+    "/js/admin/profiles.js.map": "/js/admin/profiles.js.map",
+    "/js/admin/articles.js": "/js/admin/articles.js",
+    "/js/admin/articles.js.map": "/js/admin/articles.js.map",
     "/js/admin/admin.js": "/js/admin/admin.js",
+    "/js/admin/admin.js.map": "/js/admin/admin.js.map",
     "/js/admin/clients.js": "/js/admin/clients.js",
-    "/js/admin/carousels.js": "/js/admin/carousels.js"
+    "/js/admin/clients.js.map": "/js/admin/clients.js.map",
+    "/js/admin/carousels.js": "/js/admin/carousels.js",
+    "/js/admin/carousels.js.map": "/js/admin/carousels.js.map"
 }
