@@ -17,8 +17,8 @@ Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail
 Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::view('/login', 'pages.admin.auth.login')->name('admin.login');
-Route::view('/register', 'pages.admin.auth.register')->name('admin.register');
+Route::view('/login', 'shares.pages.admin.auth.login')->name('admin.login');
+Route::view('/register', 'shares.pages.admin.auth.register')->name('admin.register');
 Route::post('/register', 'Auth\RegisterController@register')->name('admin.register.submit');
 Route::any('/', 'Admin\HomeController@show');
 Route::get('/articles', 'Admin\ArticleController@get');
