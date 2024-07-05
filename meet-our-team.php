@@ -44,7 +44,7 @@ function displayProfile($image, $modalid, $name, $title)
             <?php displayProfile("richard_penn.JPG", 'richardpenn', 'Richard Penn', 'Project Manager'); ?>
             <?php displayProfile("afishbaugh.png", 'austinfishbaugh', "Austin Fishbaugh", "IT & Applications Consultant"); ?>
             <?php displayProfile("marsha-foxx.jpg", 'marshafoxx', "Marsha Foxx", "Epicor Consultant"); ?>
-            <?php /* displayProfile("headshot.gif", 'dwaynejackson', "Dwayne Jackson", "Epicor Consultant"); */ ?>
+            <?php displayProfile("dwayne-jackson.jpg", 'dwaynejackson', "Dwayne Jackson", "Epicor Consultant"); ?>
             <?php displayProfile("wmalcolm.png", 'billmalcolm', "Bill Malcolm", "Project Manager & Senior Dynamics Consultant"); ?>           
             <?php displayProfile("Pascal_Orliac.jpg", 'pascalorliac', "Pascal Orliac", "Human Capital Strategies and Management, Sales & Marketing"); ?>
             <?php displayProfile("tsanborn.jpg", 'timsanborn', "Tim Sanborn", "Sales & Marketing"); ?>

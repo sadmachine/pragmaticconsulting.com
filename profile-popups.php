@@ -91,7 +91,7 @@ function profile_modal($modalid, $image, $name, $contentpath)
 <?php profile_modal('georgeelias', 'georgeelias.jpeg', 'George Elias', "content/profiles/george-elias.php"); ?>
 
 <!-- Dwayne Jackson Pop-up info (Bootstrap Modal) -->
-<?php profile_modal('dwaynejackson', 'headshot.gif', 'Dwayne Jackson', "content/profiles/dwayne-jackson.php"); ?>
+<?php profile_modal('dwaynejackson', 'dwayne-jackson.jpg', 'Dwayne Jackson', "content/profiles/dwayne-jackson.php"); ?>
 
 
 
