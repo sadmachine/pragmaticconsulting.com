@@ -10,24 +10,13 @@ class Mail
 
     public static function send($toEmail, $toName, $subject, $body)
     {
-        $mail = new PHPMailer(true);
-        $mail->isSMTP();
         try {
-            $mail->SMTPDebug = 1;
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->SMTPSecure = 'SSL';
-            $mail->Port = 465;                    //SMTP port
-            $mail->Host = 'mail.smtp2go.com';  //gmail SMTP server
-            $mail->Username = 'inquiries';   //email
-            $mail->Password = '7vif68SJBbGMuwfQ';   //16 character obtained from app password created
-            $mail->SMTPOptions = array(
-                'ssl' => array(
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                )
-            );
-
+            $mail->Host = 'netsol-smtp-oxcs.hostingplatform.com';  //gmail SMTP server
+            $mail->Username = 'inquiries@pragmaticconsulting.com';   //email
+            $mail->Password = 'Info!Prag234';   //16 character obtained from app password created
 
             //sender information
             $mail->isHTML(true);
@@ -47,7 +36,6 @@ class Mail
             $logFile = fopen(__DIR__ . '/logs/' . $fileName, 'a');
             fwrite($logFile, $timestamp . ' ' . $errorMessage . '\n');
             fclose($logFile);
-            $mail->smtpClose();
         } catch (\Exception $e) {
             $errorMessage = $e->getMessage();
             $fileName = date('Y-m-d');
@@ -55,7 +43,8 @@ class Mail
             $logFile = fopen(__DIR__ . '/logs/' . $fileName, 'a');
             fwrite($logFile, $timestamp . ' ' . $errorMessage . '\n');
             fclose($logFile);
-            $mail->smtpClose();
         }
+        
+        $mail->smtpClose();
     }
 }
