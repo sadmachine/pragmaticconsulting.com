@@ -18,17 +18,18 @@ require_once __DIR__ . '/template/new/start.php';
                     <div class="media">
                         <div class="media-body">
                             <p class="lead">
-                                As an Epicor Certified Service Provider, our <a href="it-and-systems.php">IT and Systems</a>
-                                experts have
-                                extensive experience successfully implementing <strong>Epicor</strong> and many related ERP
-                                projects. This
-                                includes many years of evolving with the software product from the days of the Vantage
-                                software to the
-                                latest versions including Kinetic and Prophet 21, as well as several sub-system related
-                                systems solutions.
-                                <span class="text-prag text-bold">Pragmatic’s</span> team works with the customer to utilize
-                                our
-                                experience having <em>completed nearly 100 ERP implementations</em>.<br>
+                                As an Epicor Certified Service Provider our <a href="it-and-systems.php">IT and
+                                Systems</a> experts possess extensive experience successfully implementing
+                                <strong>Epicor</strong> and many related ERP projects. Pragmatic has many years of
+                                evolving with Epicor product solutions from the days of Vantage to the current Kinetic
+                                environments, whether in the Cloud or “On Prem”. Our expertise includes Kinetic,
+                                Prophet 21, and BisTrack.
+                            </p>
+                            <p class="lead">
+                                We have integrated numerous related sub-systems from all of the areas listed below and
+                                more! This has included implementations in multi-company and multi-site to standalone
+                                environments. To date, <span class="text-prag text-bold">Pragmatic</span> has
+                                <em>completed over 100 successful implementations</em>. 
                             </p> <!-- .lead -->
                             <a href="contact.php" class="btn btn-prag" role="button">Get in touch</a>
                         </div> <!-- .media-body -->
@@ -41,7 +42,7 @@ require_once __DIR__ . '/template/new/start.php';
                 </div> <!-- .card-body -->
             </section> <!-- .card -->
         </div> <!-- .col-12 -->
-    </div> <!-- .row -->
+    </div class=".row"> <!-- .row -->
     <div class="row">
         <div class="col-12">
             <section class="card card-compact" data-aos="fade-up">
