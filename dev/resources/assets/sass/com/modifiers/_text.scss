@@ -23,7 +23,7 @@
     }
 
     &-prag {
-        color: abstracts.$prag-red;
+        color: abstracts.$prag-red !important;
 
         &-block {
             color: #fefefe;
