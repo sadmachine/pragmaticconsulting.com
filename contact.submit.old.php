@@ -1,5 +1,11 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'vendor/autoload.php';
+
+
 session_start();
 $parts = explode('/', $_SERVER['PHP_SELF']);
 $last = array_pop($parts);
@@ -162,61 +168,28 @@ $message
 </html>
 EMAIL;
 
-  $headers = [
-    'From: Pragmatic Consulting <inquiries@pragmaticconsulting.com>',
-    'Reply-To: Inquiries@pragmaticconsulting.com',
-    'Sender: Pragmatic Consulting <inquiries@pragmaticconsulting.com>',
-    'X-Sender: Pragmatic Consulting <inquiries@pragmaticconsulting.com>',
-    'X-Mailer: PHP/' . phpversion(),
-    'Return-Path: afishbaugh@pragmaticconsulting.com',
-    'MIME-Version: 1.0',
-    'Content-Type: text/html',
-    'Content-Disposition: inline'
-  ];
-  $headers = implode("\r\n", $headers);
-
-  $success = mail($to, $subject, $body, $headers);
-  if (!$success) {
-    $errorMessage = error_get_last()['message'];
-    $fileName = date('Y-m-d');
-    $timestamp = '[' . date('H:i:s') . ']';
-    $logFile = fopen(__DIR__ . '/logs/' . $fileName, 'a');
-    fwrite($logFile, $timestamp . ' ' . $errorMessage . '\n');
-    fclose($logFile);
-  }
+  App\Mail::send($to, 'Web Submission', $subject, $body);
 }
 
 function send_confirmation($inquiry)
 {
+
   $subject = 'Thank You For Contacting Pragmatic Consulting!';
+
   $email = $inquiry['email'];
+
   $body = <<<EMAIL
-One of our expert consultants will contact you within 2 business days.
+<p>One of our expert consultants will contact you within 2 business days.</p>
 
-
-Pragmatic Consulting, Inc.
-www.PragmaticConsulting.com
-Phone: (603) 431-4461
-Email: Inquiries@PragmaticConsulting.com
+<p>
+Pragmatic Consulting, Inc.<br>
+www.PragmaticConsulting.com<br>
+Phone: (603) 431-4461<br>
+Email: Inquiries@PragmaticConsulting.com<br>
+</p>
 EMAIL;
 
-  $headers = [
-    'From: Pragmatic Consulting <Inquiries@pragmaticconsulting.com>',
-    'Reply-To: ' . $email,
-    'X-Sender: Pragmatic Consulting <Inquiries@pragmaticconsulting.com>',
-    'X-Mailer: PHP/' . phpversion(),
-    'Return-Path: afishbaugh@pragmaticconsulting.com',
-  ];
-  $headers = implode("\r\n", $headers);
-  $success = mail($email, $subject, $body, $headers);
-  if (!$success) {
-    $errorMessage = error_get_last()['message'];
-    $fileName = date('Y-m-d');
-    $timestamp = '[' . date('H:i:s') . ']';
-    $logFile = fopen(__DIR__ . '/logs/' . $fileName, 'a');
-    fwrite($logFile, $timestamp . ' ' . $errorMessage . '\n');
-    fclose($logFile);
-  }
+  App\Mail::send($email, $inquiry['name'], $subject, $body);
 }
 
 function save_to_db($inquiry)

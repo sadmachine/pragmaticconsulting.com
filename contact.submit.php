@@ -1,16 +1,13 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require_once 'vendor/autoload.php';
-
+include_once __DIR__ . "/vendor/autoload.php";
 
 session_start();
 $parts = explode('/', $_SERVER['PHP_SELF']);
 $last = array_pop($parts);
 $CD = implode('/', $parts);
 $SERVER_CD = $_SERVER['SERVER_NAME'] . $CD;
+
 
 $captchaSuccess = false;
 
@@ -94,12 +91,9 @@ if (isset($_POST['name'], $_POST['company'], $_POST['email'], $_POST['telephone'
 }
 
 if ($captchaSuccess && empty($errors)) {
-  send_to_sales($_POST);
-
-  send_confirmation($_POST);
-
   save_to_db($_POST);
-
+  send_to_sales($_POST);
+  send_confirmation($_POST);
   $URL = $CD . "/thankyou.php";
   header('Location: ' . $URL);
   exit();
@@ -168,25 +162,31 @@ $message
 </html>
 EMAIL;
 
-  App\Mail::send($to, 'Web Submission', $subject, $body);
+
+  App\Mail::send($to, $name, $subject, $body);
 }
 
 function send_confirmation($inquiry)
 {
-
   $subject = 'Thank You For Contacting Pragmatic Consulting!';
-
   $email = $inquiry['email'];
-
   $body = <<<EMAIL
-<p>One of our expert consultants will contact you within 2 business days.</p>
+<html>
+<head>
+</head>
+<body>
+  <p>
+    One of our expert consultants will contact you within 2 business days.
+  </p>
 
-<p>
-Pragmatic Consulting, Inc.<br>
-www.PragmaticConsulting.com<br>
-Phone: (603) 431-4461<br>
-Email: Inquiries@PragmaticConsulting.com<br>
-</p>
+  <p>
+    Pragmatic Consulting, Inc.<br>
+    www.PragmaticConsulting.com<br>
+    Phone: (603) 431-4461<br>
+    Email: Inquiries@PragmaticConsulting.com<br>
+  </p>
+</body>
+</html>
 EMAIL;
 
   App\Mail::send($email, $inquiry['name'], $subject, $body);
