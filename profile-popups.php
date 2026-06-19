@@ -99,3 +99,5 @@ function profile_modal($modalid, $image, $name, $contentpath)
 <!-- Frederick Schlensker Pop-up info (Bootstrap Modal) -->
 <?php profile_modal('frederickschlensker', 'fschlensker.jpg', 'Frederick Schlensker', "content/profiles/frederick-schlensker.php"); ?>
 
+<!-- Layla Berry Pop-up info (Bootstrap Modal) -->
+<?php profile_modal('laylaberry', 'headshot.gif', 'Layla Berry', "content/profiles/layla-berry.php"); ?>

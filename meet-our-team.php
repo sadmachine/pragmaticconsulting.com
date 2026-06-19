@@ -56,6 +56,7 @@ function displayProfile($image, $modalid, $name, $title)
                         <?php /* displayProfile("tkueppers.jpg", 'timkuepper', "Tim Kuepper", "ERP Operations & Systems Consultant"); */ ?>
              <?php displayProfile("robert_hurley.jpg", 'roberthurley', "Robert Hurley", "Prophet 21 Application & Implementation Consultant"); ?>
              <?php displayProfile("fschlensker.jpg", 'frederickschlensker', "Frederick Schlensker", "Prophet 21 Application & Implementation Consultant"); ?>
+             <?php displayProfile("headshot.gif", 'laylaberry', "Layla Berry", "Prophet 21 Application & Implementation Consultant"); ?>
           </div>
           <!-- 'profile-popups.php' contains the Bootstrap Modals that appear when the profiles are clicked. Update profile information there. -->
           <?php require 'profile-popups.php' ?>
