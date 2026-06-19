@@ -1,0 +1,5 @@
+vendor/
+.php-cs-fixer.*
+.cluster_lock
+test/
+video/
