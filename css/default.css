@@ -1,0 +1,256 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+	background: #211E1F;
+		
+}
+
+.clearfix:after {
+	clear: both;
+}	background: #211E1F;
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #00000;
+    background: #211E1F;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+.container{
+background: #211E1F;
+}
+
+.container > header {
+	width: 90%;
+	max-width: 70em;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+	background: #211E1F
+
+}
+
+.container > header {
+	background: #211E1F; padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header h1 {
+	font-size: 2.125em;
+	line-height: 1.3;
+	margin: 0;
+	float: left;
+	font-weight: 400;
+	background: #211E1F;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+	background: #211E1F;
+}
+
+.container > header nav {
+	float: right;
+	background: #211E1F;
+}
+
+.container >header nav1 {
+	float:right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: #211E1F;
+	margin: 0 0.1em;
+	border: 4px solid #47a3da;
+	text-indent: -8000px;
+	background: #211E1F;
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #47a3da;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+	background: #211E1F;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+	background: #211E1F;
+}
+
+.container > header nav a:hover {
+	background: #D01334;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+#footer {
+	color: #CCCCCC;
+	background-color: #000000;
+	margin: 0;
+}
+#footer .content {
+	padding: 12px;
+	font-size: 0.9em;
+}
+
+
+
+#footer a:link {color: #999999;}
+#footer a:visited {color: #666666;}
+#footer a:hover {color: #FFFFFF;}
+
+#wrapper {
+	background-image: url(img/clm09_right.jpg);
+	background-repeat: repeat-y;
+	background-position: right top;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	
+}
+#left_wrapper {
+	float: left;
+	margin-left: -200px;
+	width: 100%;
+}
+#left {
+	float: left;
+	width: 200px;
+	margin-left: 200px;
+}
+#center {
+	margin-left: 400px;
+	background-image: url(../img_prag/bggrad.jpg);
+	background-repeat: repeat-x;
+	text-align:justify;
+}
+#right {
+	float: left;
+	width: 200px;
+}
+#left .content {
+	padding: 24px 20px;
+	font-size: 0.90em;/*v - 85*/
+	line-height: 1.35em;
+}
+#center .content {
+	padding: 10px 20px;
+	float: left:
+	
+		
+}
+#right .content {
+	padding: 20px 20px;
+	/*font-size: 0.7em;   */ 
+	line-height: 1.35em;
+	background-repeat: no-repeat;
+}
+#right .content .sidebarimage {
+	padding: 0.5em 0 0.5em 0.5em; /*v - add this line*/
+	
+}
+h1, h2, h3 {margin-top: 0;}
+.clearfloat {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+
+input.MyButton {
+  width: 400px;
+  padding: 0px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 150%;
+  background: #ff0000;
+  color: #fff;
+  border: 1px solid #3366cc;
+  border-radius: 10px;
+}
+input.MyButton:hover {
+  color: #ffff00;
+  background: #000;
+  border: 1px solid #fff;
+}
+
+
+
+

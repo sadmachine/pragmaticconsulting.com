@@ -1,0 +1,237 @@
+<?php
+
+include_once __DIR__ . "/vendor/autoload.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Check if the form was submitted via POST
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $referringPage = $_SERVER['HTTP_REFERER'];
+    } else {
+        $referringPage = 'conatct.php';
+    }
+} else {
+    echo "This page is not intended for direct access or form submission via GET.";
+    sleep(5);
+    header('Location: https://pragmaticconsulting.com');
+}
+
+session_start();
+$parts = explode('/', $_SERVER['PHP_SELF']);
+$last = array_pop($parts);
+$CD = implode('/', $parts);
+$SERVER_CD = $_SERVER['SERVER_NAME'] . $CD;
+
+
+$captchaSuccess = false;
+
+if (isset($_POST['name'], $_POST['company'], $_POST['email'], $_POST['telephone'], $_POST['message'])) {
+  $errors = array();
+
+  $name = $_POST['name'];
+  $company = $_POST['company'];
+  $email = $_POST['email'];
+  $telephone = $_POST['telephone'];
+  $message = $_POST['message'];
+
+  $title = $_POST['title'] ?? '';
+
+
+  if (isset($_POST['g-recaptcha-response'])) {
+    $captcha = $_POST['g-recaptcha-response'];
+  }
+  if (!$captcha) {
+    $errors['reCaptcha'] = "Could not verify the captcha.";
+  } else {
+    $secretKey = "6LfPG70ZAAAAAHuo1OuN_ABwg8GGTbXeegV1X9c2";
+    $data = array(
+      'secret' => $secretKey,
+      'response' => $captcha
+    );
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $ch = curl_init($url);
+    # Form data string
+    $postString = http_build_query($data, '', '&');
+    # Setting our options
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    # Get the response
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $responseKeys = json_decode($response, true);
+    if ($responseKeys['success'] == false) {
+      $errors['reCaptcha'] = 'reCaptcha verification failed.';
+    } else {
+      $captchaSuccess = true;
+    }
+    if ($responseKeys['score'] < 0.5) {
+      $errors['reCaptcha'] = 'reCaptcha score was too low to accept your response.';
+    }
+    if (preg_match("/^[a-zA-Z][a-zA-Z -]+$/", $_POST["name"]) === 0) {
+      $errors['name'] = 'Name field allows only letters and spaces.';
+    }
+
+    if (empty($company)) {
+      $errors['company'] = 'Company field cannot be left blank.';
+    }
+
+    if (empty($name)) {
+      $errors['name'] = 'Name field cannot be left blank.';
+    }
+
+    if (empty($message)) {
+      $errors['message'] = 'Message field cannot be left blank.';
+    }
+
+    if (empty($email)) {
+      $errors['email'] = 'Email field cannot be left blank.';
+    }
+
+    if (empty($telephone)) {
+      $errors['telephone'] = 'Telephone field cannot be left blank.';
+    }
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+      $errors['email'] = 'Incorrect email format. Please supply an email in the format name@domain.com.';
+    }
+
+    if (!empty($errors)) {
+      $_SESSION['submission_errors'] = $errors;
+      header("Location: " . $referringPage);
+      exit();
+    }
+  }
+}
+
+if ($captchaSuccess && empty($errors)) {
+  save_to_db($_POST);
+  send_to_sales($_POST);
+  send_confirmation($_POST);
+  $URL = $CD . "/thankyou.php";
+  header('Location: ' . $URL);
+  exit();
+}
+
+function send_to_sales($inquiry)
+{
+  $to = 'Inquiries@pragmaticconsulting.com';
+  $subject = 'New PragmaticConsulting.com web Submission!!!';
+
+  $name = $inquiry['name'];
+  $email = $inquiry['email'];
+  $telephone = $inquiry['telephone'];
+  $message = $inquiry['message'];
+  $company = $inquiry['company'];
+  $title = $inquiry['title'];
+
+
+  $body = <<<EMAIL
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    caption {
+      font-weight: bold;
+    }
+    th, td {
+      text-align: left;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <caption>Contact Details</caption>
+  <tr>
+    <th>Name</th>
+    <td>$name</td>
+  </tr>
+  <tr>
+    <th>Company</th>
+    <td>$company</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td>$title</td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>$email</td>
+  </tr>
+  <tr>
+    <th>Telephone</th>
+    <td>$telephone</td>
+  </tr>
+</table>
+
+<h3>Message:</h3> </br>
+$message
+
+</pre>
+</body>
+</html>
+EMAIL;
+
+
+  App\Mail::send($to, $name, $subject, $body);
+}
+
+function send_confirmation($inquiry)
+{
+  $subject = 'Thank You For Contacting Pragmatic Consulting!';
+  $email = $inquiry['email'];
+  $body = <<<EMAIL
+<html>
+<head>
+</head>
+<body>
+  <p>
+    One of our expert consultants will contact you within 2 business days.
+  </p>
+
+  <p>
+    Pragmatic Consulting, Inc.<br>
+    www.PragmaticConsulting.com<br>
+    Phone: (603) 431-4461<br>
+    Email: Inquiries@PragmaticConsulting.com<br>
+  </p>
+</body>
+</html>
+EMAIL;
+
+  App\Mail::send($email, $inquiry['name'], $subject, $body);
+}
+
+function save_to_db($inquiry)
+{
+  // Required fields
+  $name = $inquiry['name'];
+  $company = $inquiry['company'];
+  $email = $inquiry['email'];
+  $telephone = $inquiry['telephone'];
+  $message = $inquiry['message'];
+
+  // Optional fields
+  $title = $inquiry['title'] ?? NULL;
+
+  // DB info
+  $servername = 'localhost';
+  if ($_SERVER['SERVER_NAME'] != 'prag-01-hv-01') {
+    $servername = 'mysqlcluster23';
+  }
+  $username = 'inquiries';
+  $password = 'R3dGl0be!';
+
+  $conn = new mysqli($servername, $username, $password, 'inquiries');
+
+
+  $result = $conn->query("
+        INSERT INTO inquiries (name, company, email, telephone, title, message) 
+        VALUES ('{$name}', '{$company}', '{$email}', '{$telephone}', '{$title}', '{$message}')
+    ");
+
+  $conn->close();
+}
