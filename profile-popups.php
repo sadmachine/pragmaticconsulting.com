@@ -101,3 +101,6 @@ function profile_modal($modalid, $image, $name, $contentpath)
 
 <!-- Layla Berry Pop-up info (Bootstrap Modal) -->
 <?php profile_modal('laylaberry', 'headshot.gif', 'Layla Berry', "content/profiles/layla-berry.php"); ?>
+
+<!-- Terrence Blue Pop-up info (Bootstrap Modal) -->
+<?php profile_modal('terrenceblue', 'headshot.gif', 'Terrence Blue', "content/profiles/terrence-blue.php"); ?>
