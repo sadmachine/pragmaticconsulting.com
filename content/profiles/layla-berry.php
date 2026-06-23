@@ -30,6 +30,8 @@
     <li>Collaborated with warehouse and receiving teams to implement and optimize Wireless Warehouse (WMS) in P21, improving inventory accuracy and operational throughput.</li>
     <li>Created custom forms, business documents, and operational reports to support sales, purchasing, warehouse, and finance teams.</li>
     <li>Conducted process mapping and implemented workflow improvements to enhance efficiency across departments.</li>
+    <li>Implemented SPS Commerce EDI to automate sales orders, purchase orders, and order acknowledgments, streamlining order processing workflows.</li>
+    <li>Oversaw rigorous testing and deployment during the migration from NetSuite to P21, preserving data integrity and minimizing operational disruption.</li>
 </ul>
 
 <h3>Education</h3>
