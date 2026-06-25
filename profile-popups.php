@@ -100,7 +100,7 @@ function profile_modal($modalid, $image, $name, $contentpath)
 <?php profile_modal('frederickschlensker', 'fschlensker.jpg', 'Frederick Schlensker', "content/profiles/frederick-schlensker.php"); ?>
 
 <!-- Layla Berry Pop-up info (Bootstrap Modal) -->
-<?php profile_modal('laylaberry', 'headshot.gif', 'Layla Berry', "content/profiles/layla-berry.php"); ?>
+<?php profile_modal('laylaberry', 'lberry.png', 'Layla Berry', "content/profiles/layla-berry.php"); ?>
 
 <!-- Terrence Blue Pop-up info (Bootstrap Modal) -->
 <?php profile_modal('terrenceblue', 'terblue.jpg', 'Terrence Blue', "content/profiles/terrence-blue.php"); ?>
