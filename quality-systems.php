@@ -26,8 +26,8 @@ class CarouselItem {
       $active_class = "active";
     }
     $rendered = <<<HEREDOC
-<div class='carousel-item ${active_class}'>
-  <img class='d-block w-100 img-fluid ${lazy_class}' ${src} alt='$this->title'>
+<div class='carousel-item {$active_class}'>
+  <img class='d-block w-100 img-fluid {$lazy_class}' {$src} alt='$this->title'>
   <div class='carousel-caption d-none d-sm-block'>
     <h5>$this->title</h5>
   </div>

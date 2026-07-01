@@ -3,26 +3,26 @@ function carousel_item($img_loc, $title, $active = false, $lazy = true, $second 
 {
   $active_class = "";
   $lazy_class = "lazy";
-  $src = "data-src='${img_loc}'";
+  $src = "data-src='{$img_loc}'";
   if ($lazy == false) {
     $lazy_class = "";
-    $src = "src='${img_loc}'";
+    $src = "src='{$img_loc}'";
   }
   if ($second == true) {
-    $src = "src='${img_loc}'";
+    $src = "src='{$img_loc}'";
   }
   if ($active == true) {
     $active_class = "active";
   }
 
 
-  echo "<div class='carousel-item ${active_class}'>";
-  echo "  <img class='d-block w-100 img-fluid ${lazy_class}' ${src} alt='${title}'>";
+  echo "<div class='carousel-item {$active_class}'>";
+  echo "  <img class='d-block w-100 img-fluid {$lazy_class}' {$src} alt='{$title}'>";
   echo "  <div class='carousel-caption d-none d-sm-block'>";
-  echo "    <h5>${title}</h5>";
+  echo "    <h5>{$title}</h5>";
   echo "  </div>";
   echo "  <div class='carousel-caption d-block d-sm-none'>";
-  echo "    <h6>${title}</h6>";
+  echo "    <h6>{$title}</h6>";
   echo "  </div>";
   echo "</div>";
 }

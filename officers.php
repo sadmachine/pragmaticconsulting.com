@@ -8,12 +8,12 @@ function displayProfile($image, $modalid, $name, $title)
     echo  "<div class='col-12 col-sm-5 col-lg-4 col-xl-3 officer mb-3 mx-0 mx-sm-2 mx-lg-3'>";
     echo    "<div class='row picture-frame'>";
     echo      "<div class='col'>";
-    echo        "<a data-toggle='modal' data-target='#${modalid}Info'><img class='img-fluid rounded' src='img/team/${image}' alt='${name}'/></a>";
+    echo        "<a data-toggle='modal' data-target='#{$modalid}Info'><img class='img-fluid rounded' src='img/team/{$image}' alt='{$name}'/></a>";
     echo      "</div>";
     echo    "</div>";
     echo    "<div class='row'>";
     echo      "<p class='col'>";
-    echo        "<a class='link' data-toggle='modal' data-target='#${modalid}Info' href=''>{$name}</a>";
+    echo        "<a class='link' data-toggle='modal' data-target='#{$modalid}Info' href=''>{$name}</a>";
     echo      "</p>";
     echo    "</div>";
     echo    "<div class='row'>";
